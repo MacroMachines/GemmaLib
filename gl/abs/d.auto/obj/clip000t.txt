@@ -1,0 +1,6 @@
+<desc>;
+constrict signal to lie between two bounds.;
+
+<args>;
+1) float: (optional) initial minimum value beyond which to clip the signal.;
+2) float: (optional) initial maximum value beyond which to clip the signal.;

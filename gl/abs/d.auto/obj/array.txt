@@ -1,0 +1,6 @@
+<desc>;
+general array creation and manipulation.(vanilla only);
+
+<args>;
+1) symbol: define\, size\, sum\, get\, set\, quantile\, random\, max\, min.;
+2) symbol or float.;

@@ -1,0 +1,5 @@
+<desc>;
+bandlimited oscillator with waveform selection.;
+
+<args>;
+1) float: number of lookup table.;

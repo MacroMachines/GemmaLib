@@ -1,0 +1,6 @@
+<desc>;
+sequence messages in right-to-left order.;
+
+<args>;
+n) float\, bang\, symbol\, list\, anything.;
+

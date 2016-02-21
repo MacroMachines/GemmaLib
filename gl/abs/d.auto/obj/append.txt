@@ -1,0 +1,6 @@
+<desc>;
+add a scalar to the canvas.;
+
+<args>;
+1) symbol: the struct name that specifies the template of a new scalar to append.;
+n) symbol: all subsequent arguments are names of fields to initialize.;

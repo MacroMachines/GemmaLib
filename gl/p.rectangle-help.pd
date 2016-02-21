@@ -1,0 +1,163 @@
+#N canvas 243 28 571 831 10;
+#X obj 10 779 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty p.rectangle 3 12 0 18 -138934
+-1 0;
+#X obj 10 376 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 451 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 550 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 750 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X obj 88 384 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 460 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 323 801 published under the GNU Public License;
+#X text 323 781 copyright by Iceblink Digital \, Inc.;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#N canvas 335 178 836 576 helpmode 0;
+#X obj 18 96 loadbang;
+#X obj 18 127 metro 50;
+#X obj 18 159 s help.file.mode;
+#X obj 78 376 f;
+#X msg 78 281 1;
+#X obj 78 304 change;
+#X obj 78 326 t b b;
+#X obj 105 352 value help.file.nth;
+#X obj 18 512 s \$0-help.file.z;
+#X obj 78 406 + 100;
+#X obj 18 256 t b b;
+#X obj 18 471 f;
+#X msg 512 471 c \$1 \$2 \$3;
+#X obj 476 352 r \$0-help.file.bgc;
+#X obj 18 216 r \$0-help.file.get.z;
+#X obj 455 393 list;
+#X obj 455 434 route bang;
+#X obj 512 512 gl/p.rectangle x 512 y 512 w 1024 h 1024 z 1;
+#X text 14 13 *this subpatch is used to make objects in this help file
+'only visible' in the display window. and to 'refresh' the display
+window as soon as you close the help file.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 15 0;
+#X connect 3 0 9 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 6 1 7 0;
+#X connect 7 0 3 1;
+#X connect 9 0 11 1;
+#X connect 9 0 7 0;
+#X connect 10 0 11 0;
+#X connect 10 1 4 0;
+#X connect 11 0 8 0;
+#X connect 12 0 17 0;
+#X connect 13 0 15 1;
+#X connect 14 0 10 0;
+#X connect 15 0 16 0;
+#X connect 16 1 12 0;
+#X restore 492 36 pd helpmode;
+#X obj 10 59 gl/p.display d iphone o 1;
+#X text 118 461 list;
+#X text 170 60 display window;
+#X obj 100 307 unpack f f;
+#X floatatom 100 334 5 0 0 0 - - -, f 5;
+#X floatatom 157 334 5 0 0 0 - - -, f 5;
+#X text 198 400 change the corresponding property value.;
+#X text 188 384 - the property name \, followed by its value permits
+you to;
+#X text 118 424 reset;
+#X text 188 424 - reset all properties back to the creation settings.
+;
+#X obj 88 490 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
+;
+#X text 118 491 list;
+#X obj 88 520 cnv 17 3 17 empty empty 2 5 9 0 16 -228856 -162280 0
+;
+#X text 118 521 list;
+#X text 188 491 - outputs x \, y coordinates when touch move is detected.
+;
+#X text 188 521 - outputs x \, y coordinates when touch up is detected.
+;
+#X text 188 461 - outputs x \, y coordinates when touch down is detected.
+;
+#X text 118 556 you can set the creation arguments by using pairs of
+messages that are 'property name' and 'property value'.;
+#X text 310 623 p = name of preset to load (symbol);
+#X text 310 663 c = name of color to load (symbol);
+#X text 16 703 l = line width in pixels when unfilled (float);
+#X text 16 623 x \, y = x and y coordinates in pixels (float);
+#X text 16 643 w \, h = width and height in pixels (float);
+#X text 310 643 s = size in pixels (float);
+#X text 16 663 r \, g \, b \, a = rgba values (int: 0-255);
+#X text 310 683 f = fill/unfill (int: 1/0);
+#X text 310 703 z = z-order(drawing order) (int: 1-100);
+#X text 16 723 v = visible/invisible (int: 1/0);
+#X text 148 598 - list of properties and value types.;
+#X text 104 354 touch down;
+#X text 86 333 x;
+#X text 144 333 y;
+#X obj 251 307 unpack f f;
+#X floatatom 251 334 5 0 0 0 - - -, f 5;
+#X floatatom 308 334 5 0 0 0 - - -, f 5;
+#X text 237 333 x;
+#X text 295 333 y;
+#X obj 402 307 unpack f f;
+#X floatatom 402 334 5 0 0 0 - - -, f 5;
+#X floatatom 459 334 5 0 0 0 - - -, f 5;
+#X text 388 333 x;
+#X text 446 333 y;
+#X text 255 354 touch move;
+#X text 406 354 touch up;
+#X msg 10 124 w 150;
+#X msg 10 154 h 150;
+#X text 52 124 change width;
+#X text 52 155 change height;
+#X msg 10 184 s 200;
+#X text 92 94 change location;
+#X msg 210 94 p default;
+#X msg 210 124 reset;
+#X text 52 185 change both (size);
+#X text 255 125 reset all to the creation settings;
+#X text 375 155 change r \, g \, b \, a values;
+#X msg 210 154 r 100 \, g 200 \, b 255 \, a 200;
+#X msg 210 184 c aquamarine;
+#X text 295 185 load color from 'gl/text/color.txt';
+#X text 301 215 set r \, g \, b value as a list;
+#X msg 210 214 c 150 100 255;
+#X msg 10 236 f \$1;
+#X text 44 237 fill/unfill;
+#X obj 10 214 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 10 94 x 100 \, y 280;
+#X text 118 384 message;
+#X text 298 228 (only works through the inlet);
+#X text 21 37 draw a rectangle to the display window;
+#X obj 130 270 gl/p.rectangle x 130 y 270 s 120 c orange;
+#X text 275 95 load a preset from 'gl/text/p.rectangle.txt';
+#X text 16 683 d = degree of z-axis rotation (float);
+#X text 17 782 tags: #gui \, #primitives \, #rectangle;
+#X connect 15 0 16 0;
+#X connect 15 1 17 0;
+#X connect 44 0 45 0;
+#X connect 44 1 46 0;
+#X connect 49 0 50 0;
+#X connect 49 1 51 0;
+#X connect 56 0 79 0;
+#X connect 57 0 79 0;
+#X connect 60 0 79 0;
+#X connect 62 0 79 0;
+#X connect 63 0 79 0;
+#X connect 67 0 79 0;
+#X connect 68 0 79 0;
+#X connect 71 0 79 0;
+#X connect 72 0 79 0;
+#X connect 74 0 72 0;
+#X connect 75 0 79 0;
+#X connect 79 0 15 0;
+#X connect 79 1 44 0;
+#X connect 79 2 49 0;

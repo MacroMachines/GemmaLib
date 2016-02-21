@@ -1,0 +1,5 @@
+<desc>;
+adsr envelope generator with curve amount option.;
+
+<args>;
+1) float: initializes curve amount.;

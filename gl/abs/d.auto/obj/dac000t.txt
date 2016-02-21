@@ -1,0 +1,5 @@
+<desc>;
+real time digital audio output.;
+
+<args>;
+n) float: output channels.;

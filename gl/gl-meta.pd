@@ -1,0 +1,9 @@
+#N canvas 1 23 200 200 10;
+#N canvas 0 23 420 300 META 0;
+#X text 10 70 LICENSE GNU GPL v3;
+#X text 10 10 META libdir meta file for gl;
+#X text 10 30 NAME gl;
+#X text 10 50 AUTHOR Iceblink Digital \, Inc;
+#X text 10 90 DESCRIPTION A collection of abstractions for developing
+patches that runs on mobile devices through Gemma app.;
+#X restore 10 10 pd META;

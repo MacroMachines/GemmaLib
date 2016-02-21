@@ -1,0 +1,5 @@
+<desc>;
+estimate frequency and amplitude of FFT components.;
+
+<args>;
+argument: none.;

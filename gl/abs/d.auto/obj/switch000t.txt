@@ -1,0 +1,5 @@
+<desc>;
+switch DSP computation on and off.;
+
+<args>;
+arguments: see “help”.;

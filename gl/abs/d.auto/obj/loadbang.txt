@@ -1,0 +1,5 @@
+<desc>;
+send “bang” automatically when patch loads.;
+
+<args>;
+argument: none.;

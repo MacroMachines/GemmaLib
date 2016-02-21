@@ -1,0 +1,12 @@
+#N canvas 0 22 443 312 10;
+#X obj 171 141 r g.closepatch;
+#X obj 186 103 r g.patchid;
+#X obj 171 181 sel;
+#X obj 171 227 outlet;
+#X text 21 9 [r.closebang] outputs bang when 'back' button on the display
+is pressed. ('back' button closes the patch when you run the patch
+in Gemma app);
+#X text 22 54 tags: #receiver \, #closebang;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;

@@ -1,0 +1,5 @@
+<desc>;
+add a signal inlet to a [pd].;
+
+<args>;
+arguments: none.;

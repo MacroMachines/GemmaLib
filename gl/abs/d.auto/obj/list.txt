@@ -1,0 +1,6 @@
+<desc>;
+manipulate lists.;
+
+<args>;
+1) symbol: append\, prepend\, split\, trim\, length\, fromsymbol\, tosymbol.;
+2) symbol or float.;

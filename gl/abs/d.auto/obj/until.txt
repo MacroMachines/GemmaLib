@@ -1,0 +1,5 @@
+<desc>;
+looping mechanism.;
+
+<args>;
+argument: none.;

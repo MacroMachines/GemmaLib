@@ -1,0 +1,5 @@
+<desc>;
+accelerometer receiver.;
+
+<args>;
+argument: none.;

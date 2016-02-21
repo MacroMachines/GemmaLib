@@ -1,0 +1,5 @@
+<desc>;
+bandlimited saw wave oscillator.;
+
+<args>;
+1) float: number of lookup table.;

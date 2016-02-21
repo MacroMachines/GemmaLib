@@ -1,0 +1,5 @@
+<desc>;
+draw a curve.;
+
+<args>;
+please refer to the [drawcurve] help file.;

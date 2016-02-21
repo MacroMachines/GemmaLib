@@ -1,0 +1,6 @@
+<desc>;
+read a soundfile.;
+
+<args>;
+1) float: an integer that specifies the number of channels.;
+2) float: buffer size per channel in bytes.;

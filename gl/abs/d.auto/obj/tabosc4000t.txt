@@ -1,0 +1,6 @@
+<desc>;
+4-point-interpolating oscillator.;
+
+<args>;
+1) symbol: initializes the table or array to use.;
+

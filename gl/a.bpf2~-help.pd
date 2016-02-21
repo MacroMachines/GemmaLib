@@ -1,0 +1,94 @@
+#N canvas 0 22 573 626 10;
+#X obj 10 575 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty a.bpf2~ 3 12 0 18 -138934 -1
+0;
+#X obj 10 386 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 478 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 515 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 546 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X obj 88 395 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 487 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 423 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 450 cnv 17 3 17 empty empty 2 5 9 0 16 -228856 -162280 0
+;
+#X text 108 486 signal;
+#X text 108 394 signal;
+#X text 108 422 signal;
+#X text 108 449 signal;
+#X text 323 597 published under the GNU Public License;
+#X text 323 577 copyright by Iceblink Digital \, Inc.;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#X obj 253 203 sig~;
+#X obj 303 203 sig~;
+#X obj 253 179 mtof;
+#X floatatom 253 155 5 0 0 0 - - -, f 5;
+#X obj 256 122 hsl 128 15 20 127 0 0 empty empty cutoff -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 303 180 5 0 0 0 - - -, f 5;
+#X obj 306 156 hsl 128 15 0 1 0 0 empty empty resonance -2 -8 0 10
+-262144 -1 -1 0 1;
+#X text 178 394 - the incoming signal to be filtered.;
+#X text 177 422 - cutoff frequency in Hz. (range: 20 ~ samplerate/2)
+;
+#X text 177 449 - resonance. (range: 0 ~ 1);
+#X obj 188 203 noise~;
+#X obj 188 355 dac~;
+#X obj 188 321 *~ 0.1;
+#X text 21 37 2 pole band pass filter with resonance control;
+#X text 108 520 (none);
+#X text 178 486 - the filtered signal.;
+#N canvas 4 23 229 259 d.dspstate 0;
+#X obj 82 26 r pd;
+#X obj 82 52 route dsp;
+#X msg 101 138 1;
+#X obj 51 169 sig~;
+#X obj 51 193 snapshot~;
+#X obj 82 109 t b b b;
+#X msg 130 138 set 0;
+#X obj 51 138 del 10;
+#X obj 19 1 cnv 15 40 18 empty empty dsp 9 9 1 15 -233017 -66577 0
+;
+#X obj 0 0 tgl 20 0 \$0-d.dspstate-s \$0-d.dspstate-r empty 17 7 0
+10 -228856 -1 -1 0 1;
+#X msg 51 223 set \$1;
+#X obj 0 79 s pd;
+#X msg 0 52 dsp \$1;
+#X obj 128 26 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 7 0;
+#X connect 5 1 2 0;
+#X connect 5 2 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 5 0;
+#X coords 0 -1 1 1 60 20 2 0 0;
+#X restore 502 57 pd d.dspstate;
+#X obj 188 291 a.bpf2~;
+#X text 17 577 tags: #audio \, #filter;
+#X connect 17 0 34 1;
+#X connect 18 0 34 2;
+#X connect 19 0 17 0;
+#X connect 20 0 19 0;
+#X connect 21 0 20 0;
+#X connect 22 0 18 0;
+#X connect 23 0 22 0;
+#X connect 27 0 34 0;
+#X connect 29 0 28 0;
+#X connect 29 0 28 1;
+#X connect 34 0 29 0;

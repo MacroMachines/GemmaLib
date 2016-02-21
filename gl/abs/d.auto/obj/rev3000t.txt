@@ -1,0 +1,5 @@
+<desc>;
+hard-core\, 2-in\, 4-out reverberator.;
+
+<args>;
+1-4) float: level(dB)\, liveness(0-100)\,crossover frequency(Hz)\, HF damping(percent).;

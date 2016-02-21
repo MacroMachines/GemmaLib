@@ -1,0 +1,5 @@
+<desc>;
+phasor generator for looping samplers.;
+
+<args>;
+argument: none.;

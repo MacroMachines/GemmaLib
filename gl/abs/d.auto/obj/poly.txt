@@ -1,0 +1,6 @@
+<desc>;
+midi-style polyphonic voice allocator;
+
+<args>;
+1) float: the first argument sets the number of voices.;
+2) a “1” sets voice stealing\, which is off by default.;

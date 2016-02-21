@@ -1,0 +1,6 @@
+<desc>;
+record sound to disc.;
+
+<args>;
+1) float: the creation argument is the number of channels (1 to 64).;
+

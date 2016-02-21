@@ -1,0 +1,6 @@
+<desc>;
+send note-on messages and schedule note-off for later.;
+
+<args>;
+1) float: initial velocity.;
+2) float: initial duration.;

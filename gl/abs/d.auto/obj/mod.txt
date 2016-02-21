@@ -1,0 +1,5 @@
+<desc>;
+produces the remainder of a division.;
+
+<args>;
+1) float: initial value of the right inlet.;

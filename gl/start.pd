@@ -1,0 +1,82 @@
+#N canvas 232 137 736 499 10;
+#N canvas 326 269 450 300 start 0;
+#X obj 184 8 gl/p.display;
+#X obj 7 8 gl/d.auto;
+#N canvas 4 23 229 259 d.dspstate 0;
+#X obj 82 26 r pd;
+#X obj 82 52 route dsp;
+#X msg 101 138 1;
+#X obj 51 169 sig~;
+#X obj 51 193 snapshot~;
+#X obj 82 109 t b b b;
+#X msg 130 138 set 0;
+#X obj 51 138 del 10;
+#X obj 19 1 cnv 15 40 18 empty empty dsp 9 9 1 15 -233017 -66577 0
+;
+#X obj 0 0 tgl 20 0 \$0-d.dspstate-s \$0-d.dspstate-r empty 17 7 0
+10 -228856 -1 -1 0 1;
+#X msg 51 223 set \$1;
+#X obj 0 79 s pd;
+#X msg 0 52 dsp \$1;
+#X obj 128 26 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 7 0;
+#X connect 5 1 2 0;
+#X connect 5 2 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 5 0;
+#X coords 0 -1 1 1 60 20 2 0 0;
+#X restore 382 8 pd d.dspstate;
+#X restore 388 102 pd start;
+#X text 32 56 it will be self-deleted when the job is done.;
+#X text 323 38 and pastes them onto it's parent canvas when it's called.
+;
+#X text 31 101 you can customize the startup objects in this subpatch
+->;
+#X text 29 38 [gl/start] copies a set of objects in a subpatch;
+#X obj 203 159 loadbang;
+#X obj 203 183 gl/ext/tof/getdollarzero root;
+#X obj 203 207 gl/ext/zexy/symbol2list;
+#X obj 203 231 sel \$0;
+#X obj 236 255 t b b b;
+#X obj 255 429 gl/ext/iemguts/sendcanvas 1;
+#X obj 430 429 s pd-start;
+#X msg 255 377 paste;
+#X obj 65 429 gl/ext/iemguts/canvasdelete 1;
+#X msg 430 377 vis 1 \, selectall \, cut \, vis 0;
+#X obj 65 377 delay 1;
+#X text 31 131 tags: #development \, #start;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X text 61 54 Copyright (C) 2016 \, Iceblink Digital \, Inc.;
+#X restore 633 469 pd LICENSE-GPL;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 1 9 0;
+#X connect 9 0 15 0;
+#X connect 9 1 12 0;
+#X connect 9 2 14 0;
+#X connect 12 0 10 0;
+#X connect 14 0 11 0;
+#X connect 15 0 13 0;

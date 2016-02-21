@@ -1,0 +1,5 @@
+<desc>;
+left is greater or equal to right.;
+
+<args>;
+1) float: initial value for the right inlet.;

@@ -1,0 +1,5 @@
+<desc>;
+send a bang message after a time delay.;
+
+<args>;
+1) float: initializes delay time.;

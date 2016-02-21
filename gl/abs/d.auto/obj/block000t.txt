@@ -1,0 +1,7 @@
+<desc>;
+block\, overlap\, and resampling control for DSP.;
+
+<args>;
+1) float: blocksize.;
+2) float: (optional) overlap.;
+3) float: (optional) resampling factor (relative to super-patch).;

@@ -1,0 +1,6 @@
+<desc>;
+write a signal in an array.;
+
+<args>;
+1) symbol: the name of the array or table to which [tabwrite~] will write data.;
+

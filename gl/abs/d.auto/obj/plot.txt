@@ -1,0 +1,10 @@
+<desc>;
+plot an array field.;
+
+<args>;
+1) symbol: the field to plot.;
+2) float: RGB color for the trace.;
+3) float: line width of the trace.;
+4) float: relative x location.;
+5) float: relative y location.;
+6) x spacing (ignored if the template for the array contains an “x” variable).;

@@ -1,0 +1,5 @@
+<desc>;
+store and recall a symbol.;
+
+<args>;
+1) symbol: initializes the stored symbol.;

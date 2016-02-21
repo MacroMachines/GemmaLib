@@ -1,0 +1,5 @@
+<desc>;
+summing signal bus and non-local connection.;
+
+<args>;
+1) symbol: takes one argument\, a symbol atom\, as its name.;

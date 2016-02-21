@@ -1,0 +1,61 @@
+#N canvas 0 22 573 626 10;
+#X obj 10 575 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty a.hpf4~ 3 12 0 18 -138934 -1
+0;
+#X obj 10 386 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 478 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 515 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 546 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X obj 88 395 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 487 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 423 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 450 cnv 17 3 17 empty empty 2 5 9 0 16 -228856 -162280 0
+;
+#X text 108 486 signal;
+#X text 108 394 signal;
+#X text 108 422 signal;
+#X text 108 449 signal;
+#X text 323 597 published under the GNU Public License;
+#X text 323 577 copyright by Iceblink Digital \, Inc.;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#X obj 253 203 sig~;
+#X obj 303 203 sig~;
+#X obj 253 179 mtof;
+#X floatatom 253 155 5 0 0 0 - - -, f 5;
+#X obj 256 122 hsl 128 15 20 127 0 0 empty empty cutoff -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 303 180 5 0 0 0 - - -, f 5;
+#X obj 306 156 hsl 128 15 0 1 0 0 empty empty resonance -2 -8 0 10
+-262144 -1 -1 0 1;
+#X text 178 394 - the incoming signal to be filtered.;
+#X text 177 422 - cutoff frequency in Hz. (range: 20 ~ samplerate/2)
+;
+#X text 177 449 - resonance. (range: 0 ~ 1);
+#X obj 188 203 noise~;
+#X obj 188 355 dac~;
+#X obj 188 321 *~ 0.1;
+#X text 108 520 (none);
+#X text 178 486 - the filtered signal.;
+#X text 21 37 4 pole high pass filter with resonance control;
+#X obj 188 291 a.hpf4~;
+#X text 17 577 tags: #audio \, #filter;
+#X connect 17 0 33 1;
+#X connect 18 0 33 2;
+#X connect 19 0 17 0;
+#X connect 20 0 19 0;
+#X connect 21 0 20 0;
+#X connect 22 0 18 0;
+#X connect 23 0 22 0;
+#X connect 27 0 33 0;
+#X connect 29 0 28 0;
+#X connect 29 0 28 1;
+#X connect 33 0 29 0;

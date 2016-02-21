@@ -1,0 +1,103 @@
+#N canvas 34 98 770 513 10;
+#X text -1 38 [gl/d.dspstate] gets and sets the dspstate of pd.;
+#X text 2 79 it will be self-deleted when the job is done.;
+#X obj 231 123 loadbang;
+#X obj 231 147 gl/ext/tof/getdollarzero root;
+#X obj 231 171 gl/ext/zexy/symbol2list;
+#X obj 231 195 sel \$0;
+#X obj 264 270 s \$0-setpos;
+#X obj 264 245 gl/ext/iemguts/canvasposition;
+#X text 361 59 canvas in order to update the dspstate of the parent
+patch.;
+#X text 2 59 it copies the subpatch above and pastes it onto it's parent
+;
+#X obj 198 473 gl/ext/iemguts/sendcanvas 1;
+#X obj 18 473 gl/ext/iemguts/canvasdelete 1;
+#X obj 522 473 gl/ext/iemguts/canvasselect;
+#X obj 366 473 gl/ext/iemguts/sendcanvas;
+#X msg 198 425 paste;
+#X msg 608 426 vis 1;
+#X obj 264 306 r \$0-delpos;
+#X obj 264 357 t b b b b b;
+#X msg 366 425 copy \, vis 0;
+#X obj 264 332 delay;
+#X msg 264 219 bang;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X text 61 54 Copyright (C) 2016 \, Iceblink Digital \, Inc.;
+#X restore 664 12 pd LICENSE-GPL;
+#X text 2 99 tags: #development \, #audio \, #dsp;
+#X msg 522 426 select 24;
+#N canvas 4 23 229 259 d.dspstate 0;
+#X obj 82 26 r pd;
+#X obj 82 52 route dsp;
+#X msg 101 138 1;
+#X obj 51 169 sig~;
+#X obj 51 193 snapshot~;
+#X obj 82 109 t b b b;
+#X msg 130 138 set 0;
+#X obj 51 138 del 10;
+#X obj 19 1 cnv 15 40 18 empty empty dsp 9 9 1 15 -233017 -66577 0
+;
+#X obj 0 0 tgl 20 0 \$0-d.dspstate-s \$0-d.dspstate-r empty 17 7 0
+10 -228856 -1 -1 0 1;
+#X msg 51 223 set \$1;
+#X obj 0 79 s pd;
+#X msg 0 52 dsp \$1;
+#N canvas 201 185 272 187 pos 0;
+#X obj 21 19 r \$0-setpos;
+#X obj 60 81 gl/ext/iemguts/canvasposition 1;
+#X obj 40 111 gl/ext/iemguts/canvasdelete 1;
+#X obj 21 45 t b b a;
+#X obj 21 141 s \$0-delpos;
+#X connect 0 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 2 0;
+#X connect 3 2 1 0;
+#X restore 150 109 pd pos;
+#X obj 128 26 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 7 0;
+#X connect 5 1 2 0;
+#X connect 5 2 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 14 0 5 0;
+#X coords 0 -1 1 1 60 20 2 0 0;
+#X restore 0 0 pd d.dspstate;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 1 20 0;
+#X connect 7 0 6 0;
+#X connect 14 0 10 0;
+#X connect 15 0 13 0;
+#X connect 16 0 19 0;
+#X connect 17 0 11 0;
+#X connect 17 1 14 0;
+#X connect 17 2 18 0;
+#X connect 17 3 23 0;
+#X connect 17 4 15 0;
+#X connect 18 0 13 0;
+#X connect 19 0 17 0;
+#X connect 20 0 7 0;
+#X connect 23 0 12 0;

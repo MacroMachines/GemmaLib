@@ -1,0 +1,6 @@
+<desc>;
+read numbers from a table and output as signal.;
+
+<args>;
+1) symbol: the argument informs [tabread~] which array to read.;
+

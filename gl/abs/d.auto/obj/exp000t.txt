@@ -1,0 +1,5 @@
+<desc>;
+will output the signal value of E^n.;
+
+<args>;
+1) optional creation argument initializes right inlet (the base of the logarithm).;

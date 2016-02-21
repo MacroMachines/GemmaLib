@@ -1,0 +1,19 @@
+song1 step8 60.0945 \, step7 57.8268 \, step6 66.8976 \, step5 62.3622
+\, step4 61.4173 \, step3 57.4488 \, step2 54.4252 \, step1 48 \,;
+song2 step8 56.126 \, step7 48 \, step6 53.4803 \, step5 62.3622 \,
+step4 61.4173 \, step3 68.9764 \, step2 58.2047 \, step1 48 \,;
+song3 step8 69.1654 \, step7 61.9843 \, step6 67.6535 \, step5 50.0787
+\, step4 64.8189 \, step3 53.4803 \, step2 56.8819 \, step1 55.937
+\,;
+song4 step8 58.2047 \, step7 61.7953 \, step6 52.3465 \, step5 71.811
+\, step4 56.6929 \, step3 67.4646 \, step2 54.0472 \, step1 66.3307
+\,;
+song5 step8 71.0551 \, step7 65.7638 \, step6 70.2992 \, step5 71.811
+\, step4 71.0551 \, step3 72 \, step2 66.7087 \, step1 59.1496 \,;
+song6 step8 71.0551 \, step7 51.9685 \, step6 67.6535 \, step5 71.811
+\, step4 54.9921 \, step3 72 \, step2 66.7087 \, step1 59.1496 \,;
+song7 step8 71.0551 \, step7 59.3386 \, step6 67.6535 \, step5 62.7402
+\, step4 54.9921 \, step3 59.3386 \, step2 52.3465 \, step1 48.7559
+\,;
+song8 step8 72 \, step7 59.3386 \, step6 57.0709 \, step5 67.8425 \,
+step4 64.6299 \, step3 72 \, step2 48 \, step1 62.5512 \,;

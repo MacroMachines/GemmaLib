@@ -1,0 +1,6 @@
+<desc>;
+get pointer to an element of an array;
+
+<args>;
+1) symbol: name of the template.;
+n) symbol: field name. the field name must be an array.;

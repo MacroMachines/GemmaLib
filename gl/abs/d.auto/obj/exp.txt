@@ -1,0 +1,5 @@
+<desc>;
+will output the control value of E^n.;
+
+<args>;
+argument: none.;

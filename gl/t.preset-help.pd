@@ -1,0 +1,144 @@
+#N canvas 243 28 572 785 10;
+#X obj 10 730 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty t.preset 3 12 0 18 -138934 -1
+0;
+#X obj 10 386 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 607 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 644 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 701 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X obj 88 394 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 616 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 323 752 published under the GNU Public License;
+#X text 323 732 copyright by Iceblink Digital \, Inc.;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#X text 118 394 load;
+#X msg 284 269 example/color;
+#X text 296 295 read file as a creation argument;
+#X obj 137 323 unpack f f f;
+#X floatatom 121 354 5 0 0 0 - - -, f 5;
+#X floatatom 171 355 5 0 0 0 - - -, f 5;
+#X floatatom 219 355 5 0 0 0 - - -, f 5;
+#X text 37 120 load preset;
+#X obj 137 294 gl/t.preset example/color;
+#X text 214 139 store a list;
+#X text 234 166 overwrite to an existing preset;
+#X text 244 192 save as a new preset;
+#X text 247 219 delete the preset;
+#X text 369 270 read 'gl/text/example/color.txt';
+#X text 20 97 For common state saving purposes \, use t.myhero & t.saveme.
+;
+#X msg 175 246 print;
+#X text 215 246 print text file contents in Pd console;
+#X msg 38 138 load default;
+#X msg 38 165 load red;
+#X msg 38 192 load lime;
+#X msg 38 219 load blue;
+#X msg 137 138 150 200 180;
+#X msg 152 165 save default;
+#X msg 163 192 save mycolor;
+#X msg 171 219 del mycolor;
+#N canvas 335 178 836 576 helpmode 0;
+#X obj 18 96 loadbang;
+#X obj 18 127 metro 50;
+#X obj 18 159 s help.file.mode;
+#X obj 78 376 f;
+#X msg 78 281 1;
+#X obj 78 304 change;
+#X obj 78 326 t b b;
+#X obj 105 352 value help.file.nth;
+#X obj 18 512 s \$0-help.file.z;
+#X obj 78 406 + 100;
+#X obj 18 256 t b b;
+#X obj 18 471 f;
+#X msg 512 471 c \$1 \$2 \$3;
+#X obj 476 352 r \$0-help.file.bgc;
+#X obj 18 216 r \$0-help.file.get.z;
+#X obj 455 393 list;
+#X obj 455 434 route bang;
+#X obj 512 512 gl/p.rectangle x 512 y 512 w 1024 h 1024 z 1;
+#X text 14 13 *this subpatch is used to make objects in this help file
+'only visible' in the display window. and to 'refresh' the display
+window as soon as you close the help file.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 15 0;
+#X connect 3 0 9 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 6 1 7 0;
+#X connect 7 0 3 1;
+#X connect 9 0 11 1;
+#X connect 9 0 7 0;
+#X connect 10 0 11 0;
+#X connect 10 1 4 0;
+#X connect 11 0 8 0;
+#X connect 12 0 17 0;
+#X connect 13 0 15 1;
+#X connect 14 0 10 0;
+#X connect 15 0 16 0;
+#X connect 16 1 12 0;
+#X restore 492 36 pd helpmode;
+#X obj 260 352 gl/p.display d iphone o 1;
+#X msg 260 327 c \$1 \$2 \$3;
+#X text 188 394 - the "load" message \, followed by the name of preset
+in a;
+#X text 200 410 text file permits you to load the preset contents.
+;
+#X text 118 453 save;
+#X text 118 431 list;
+#X text 188 453 - the "save" message \, followed by the name of preset
+permits;
+#X text 200 469 you to save/overwrite the stored message to a preset.
+;
+#X text 118 491 del;
+#X text 188 491 - the "del" message \, followed by the name of preset
+in a;
+#X text 200 507 text file permits you to delete the preset.;
+#X text 188 431 - stores the message so you can save/overwrite a preset.
+;
+#X obj 88 562 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
+;
+#X text 117 581 *file name(or path) should not contain any space.;
+#X text 118 563 file name(or path) to read from 'gl/text/' folder.
+;
+#X text 118 617 list;
+#X obj 88 671 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 21 37 read and write a list based preset from/to a text file
+;
+#X text 118 531 print;
+#X text 188 531 - print all contents of the text file in Pd console.
+;
+#X text 20 57 This abstraction is mainly used for handling common preset
+text files that are being used by graphical abstractions. (primitives
+& graphical control elements);
+#X text 188 617 - loaded preset contents.;
+#X text 17 732 tags: #text \, #preset;
+#X text 188 673 - file name(or path) to read from 'gl/text/' folder.
+;
+#X text 118 672 symbol;
+#X connect 12 0 19 1;
+#X connect 14 0 15 0;
+#X connect 14 1 16 0;
+#X connect 14 2 17 0;
+#X connect 19 0 14 0;
+#X connect 19 0 38 0;
+#X connect 26 0 19 0;
+#X connect 28 0 19 0;
+#X connect 29 0 19 0;
+#X connect 30 0 19 0;
+#X connect 31 0 19 0;
+#X connect 32 0 19 0;
+#X connect 33 0 19 0;
+#X connect 34 0 19 0;
+#X connect 35 0 19 0;
+#X connect 38 0 37 0;

@@ -1,0 +1,5 @@
+<desc>;
+measure real time.;
+
+<args>;
+arguments: none.;

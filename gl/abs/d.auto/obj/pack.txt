@@ -1,0 +1,5 @@
+<desc>;
+make compound messages.;
+
+<args>;
+n) float or symbol: the number of arguments determines the number of inlets.;

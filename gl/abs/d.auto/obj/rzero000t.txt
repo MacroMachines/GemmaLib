@@ -1,0 +1,5 @@
+<desc>;
+real one-zero (none-recursive) filter\, raw.;
+
+<args>;
+1) float: (optional) initializes filter coefficient.;

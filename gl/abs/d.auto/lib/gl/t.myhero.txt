@@ -1,0 +1,6 @@
+w<desc>;
+text file based state saving abstraction (vanilla only).;
+
+<args>;
+1) symbol: unique ID. all ’t.saveme’ objects with the same ID will store their parameters here. when in doubt\, use $0.;
+2) symbol: name of the text file that will be read located in 'text' folder without extension (.txt).;

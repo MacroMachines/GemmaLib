@@ -1,0 +1,13 @@
+#N canvas 0 22 443 274 10;
+#X obj 151 179 r g.touch.id;
+#X obj 151 239 outlet;
+#X text 21 13 [r.closebang] outputs nth(0 ~ 10) of the touches when
+any touch on the display is made. this happens right before receiving
+the touch coordinate info.;
+#X text 22 98 *You can only test this receiver action in the actual
+mobile device using Gemma app.;
+#X text 236 181 int (range: 0 ~ 10);
+#X text 22 61 This is useful when you want to handle multitouch gestures.
+e.g) using [route] connected to touch outputs of [p.display];
+#X text 22 135 tags: #receiver \, #touch \, #multitouch;
+#X connect 0 0 1 0;

@@ -1,0 +1,71 @@
+#N canvas 8 23 911 419 10;
+#X obj 193 382 gl/ext/iemguts/sendcanvas 1;
+#X obj 556 248 gl/ext/iemguts/canvasposition;
+#X obj 171 28 list append \$1;
+#X obj 171 56 sel 0;
+#X obj 12 382 gl/ext/iemguts/canvasdelete 1;
+#X obj 556 274 list append;
+#X msg 556 300 obj \$1 \$2 pd \$3;
+#X obj 713 382 s;
+#X obj 531 382 s;
+#X obj 362 382 gl/ext/iemguts/canvasselect;
+#X obj 171 0 loadbang;
+#X msg 546 335 symbol pd-\$1;
+#X msg 713 300 vis 1 \, selectall \, copy \, vis 0;
+#X msg 461 335 paste \, vis 0;
+#X msg 250 335 copy;
+#X obj 198 83 t b b b b b b a;
+#X obj 556 382 gl/ext/iemguts/sendcanvas;
+#X msg 770 335 symbol pd-\$1.pd;
+#X msg 635 335 vis 1 \, obj 0 0 abs/\$1;
+#X msg 193 335 paste;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X text 61 54 Copyright (C) 2016 \, Iceblink Digital \, Inc.;
+#X restore 794 9 pd LICENSE-GPL;
+#X text 380 43 argument0: (symbol) name of the target abstraction located
+in 'gl/abs/' without the 'pd' extension.;
+#X text 380 83 example: [gl/d.abs2sub test] -> this will copy contents
+of 'gl/abs/test.pd' abstraction and paste it onto a newly created subpatch.
+;
+#X text 380 3 [d.abs2sub] creates a subpatch and copy/paste contents
+of the target abstraction.;
+#X msg 362 335 select 27;
+#X text 380 133 tags: #development \, #abs;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 1 15 0;
+#X connect 5 0 6 0;
+#X connect 6 0 16 0;
+#X connect 10 0 2 0;
+#X connect 11 0 8 1;
+#X connect 12 0 7 0;
+#X connect 13 0 8 0;
+#X connect 14 0 16 0;
+#X connect 15 0 19 0;
+#X connect 15 0 4 0;
+#X connect 15 1 14 0;
+#X connect 15 2 24 0;
+#X connect 15 3 13 0;
+#X connect 15 4 1 0;
+#X connect 15 5 12 0;
+#X connect 15 6 11 0;
+#X connect 15 6 18 0;
+#X connect 15 6 17 0;
+#X connect 15 6 5 1;
+#X connect 17 0 7 1;
+#X connect 18 0 16 0;
+#X connect 19 0 0 0;
+#X connect 24 0 9 0;

@@ -1,0 +1,5 @@
+<desc>;
+receive bang when ’back' button on the display is pressed.;
+
+<args>;
+argument: none.;

@@ -1,0 +1,6 @@
+<desc>;
+change the size of an array.;
+
+<args>;
+1) symbol: the struct name of a scalar that contains an array.;
+2) symbol: the name of an array contained within the scalar.;

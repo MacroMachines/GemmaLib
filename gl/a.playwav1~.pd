@@ -1,0 +1,96 @@
+#N canvas 0 22 459 537 10;
+#X obj 10 510 outlet~;
+#X obj 198 11 loadbang;
+#X obj 198 189 soundfiler;
+#X obj 266 189 table \$0-left;
+#X obj 198 214 / 44.1;
+#X obj 10 11 inlet;
+#X obj 10 464 tabplay~ \$0-left;
+#X obj 67 350 -;
+#X obj 67 324 swap;
+#X obj 48 275 * 44.1;
+#X obj 105 275 * 44.1;
+#X obj 48 427 pack f f;
+#X obj 67 375 moses 1;
+#X msg 67 397 1;
+#X msg 48 163 stop;
+#X msg 10 163 bang;
+#X obj 198 510 outlet;
+#X obj 319 114 samplerate~;
+#X obj 319 138 * 0.001;
+#X obj 198 114 list append \$1 \$0;
+#X obj 198 138 route 0;
+#X obj 198 68 t b a;
+#X obj 48 214 unpack f f;
+#X obj 198 39 t b b;
+#X obj 48 189 pack f f;
+#X obj 10 39 route bang stop load float;
+#X obj 225 89 list append \$0;
+#X obj 103 427 switch~;
+#X msg 103 397 0;
+#X obj 399 510 outlet;
+#X msg 132 397 1;
+#X obj 48 298 t f f b;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X text 61 54 Copyright (C) 2016 \, Iceblink Digital \, Inc.;
+#X restore 274 379 pd LICENSE-GPL;
+#X msg 198 163 read -resize audio/\$1.wav \$2-left;
+#X connect 1 0 23 0;
+#X connect 2 0 4 0;
+#X connect 4 0 16 0;
+#X connect 4 0 24 1;
+#X connect 5 0 25 0;
+#X connect 6 0 0 0;
+#X connect 6 1 28 0;
+#X connect 6 1 29 0;
+#X connect 7 0 12 0;
+#X connect 8 0 7 0;
+#X connect 8 1 7 1;
+#X connect 9 0 31 0;
+#X connect 10 0 8 1;
+#X connect 11 0 6 0;
+#X connect 12 0 13 0;
+#X connect 12 1 11 1;
+#X connect 13 0 11 1;
+#X connect 14 0 6 0;
+#X connect 15 0 6 0;
+#X connect 17 0 18 0;
+#X connect 18 0 4 1;
+#X connect 18 0 10 1;
+#X connect 18 0 9 1;
+#X connect 19 0 20 0;
+#X connect 20 1 33 0;
+#X connect 21 0 19 0;
+#X connect 21 1 26 0;
+#X connect 22 0 9 0;
+#X connect 22 1 10 0;
+#X connect 23 0 19 0;
+#X connect 23 1 17 0;
+#X connect 24 0 22 0;
+#X connect 25 0 15 0;
+#X connect 25 0 30 0;
+#X connect 25 1 14 0;
+#X connect 25 1 28 0;
+#X connect 25 2 21 0;
+#X connect 25 3 24 0;
+#X connect 25 4 22 0;
+#X connect 26 0 19 1;
+#X connect 28 0 27 0;
+#X connect 30 0 27 0;
+#X connect 31 0 11 0;
+#X connect 31 1 8 0;
+#X connect 31 2 30 0;
+#X connect 33 0 2 0;

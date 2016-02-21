@@ -1,0 +1,6 @@
+<desc>;
+get the canvas position of the parent abstraction.;
+
+<args>;
+1) symbol: the name of the parent abstraction.;
+2) dollarzero.;

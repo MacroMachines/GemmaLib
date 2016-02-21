@@ -1,0 +1,5 @@
+<desc>;
+raise a float to a numeric power (given by another float).;
+
+<args>;
+1) optional creation argument initializes right inlet.;

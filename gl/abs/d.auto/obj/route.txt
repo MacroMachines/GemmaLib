@@ -1,0 +1,5 @@
+<desc>;
+route messages according to first element.;
+
+<args>;
+n) float or symbol: can take symbols or floats as arguments.;

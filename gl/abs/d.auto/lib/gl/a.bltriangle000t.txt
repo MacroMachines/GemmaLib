@@ -1,0 +1,5 @@
+<desc>;
+bandlimited triangle wave oscillator.;
+
+<args>;
+1) float: number of lookup table.;

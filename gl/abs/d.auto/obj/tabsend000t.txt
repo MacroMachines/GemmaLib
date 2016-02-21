@@ -1,0 +1,6 @@
+<desc>;
+write one block of a signal continously to an array.;
+
+<args>;
+1) symbol: the name of an array to write to.;
+

@@ -1,0 +1,6 @@
+<desc>;
+wrap a number to range [0\, 1].;
+
+<args>;
+argument: none.;
+

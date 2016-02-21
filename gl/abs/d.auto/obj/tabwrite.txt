@@ -1,0 +1,5 @@
+<desc>;
+write numbers to a table.;
+
+<args>;
+1) symbol: informs [tabread] on which array or table to write data.;

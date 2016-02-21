@@ -1,0 +1,5 @@
+<desc>;
+4 pole high pass filter with resonance control.;
+
+<args>;
+argument: none.;

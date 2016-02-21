@@ -1,0 +1,6 @@
+<desc>;
+sends MIDI control messages to the MIDI port.;
+
+<args>;
+1) float: controller number to transmit to.;
+2) float: channel number to transmit on.;

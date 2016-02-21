@@ -1,0 +1,80 @@
+#N canvas 402 59 516 690 10;
+#X text 14 84 When running the patch in Gemma app \, this abstraction
+will be replaced by a vanilla version of [p.pos] which basically does
+the same thing except that it works only once in the beginning of the
+patch to find out the canvas position.;
+#X obj 130 272 p.pos g.knob \$0;
+#X obj 168 360 cnv 20 20 20 \$0-xypos \$0-getpos pos 2 10 0 10 -228856
+-66577 0;
+#N canvas 0 22 280 369 p.pos 0;
+#X obj 32 23 inlet;
+#X obj 32 237 r \$2-xypos;
+#X obj 32 106 list append \$1 \$2;
+#X obj 32 266 unpack f f;
+#X msg 32 137 \; pd-\$1.pd coords 0 -1 1 1 1 1 1 0 0 \; \$2-getpos
+pos 0 0 \, get_pos \;;
+#X obj 32 80 spigot 1;
+#X msg 89 80 0;
+#X obj 142 23 inlet;
+#X obj 192 23 inlet;
+#X obj 32 311 outlet;
+#X obj 89 311 outlet;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X text 61 54 Copyright (C) 2016 \, Iceblink Digital \, Inc.;
+#X restore 184 339 pd LICENSE-GPL;
+#X connect 0 0 5 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 9 0;
+#X connect 3 1 10 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 1;
+#X connect 7 0 6 0;
+#X connect 7 0 9 0;
+#X connect 8 0 6 0;
+#X connect 8 0 10 0;
+#X restore 149 174 pd p.pos;
+#X text 14 204 Two creation arguments are required to properly use
+it. The first argument should be the name of the parent abstraction
+that you want to find out the position of. And the second argument
+should be \$0.;
+#X text 14 494 inlet 1 (float) : set x coordinate of parent abstraction
+;
+#X text 14 514 inlet 2 (float) : set y coordinate of parent abstraction
+;
+#X text 14 554 outlet 0 (float) : x coordinate of parent abstraction
+;
+#X text 14 574 outlet 1 (float) : y coordinate of parent abstraction
+;
+#X text 15 14 [p.pos] is used to get the canvas position of it's parent
+abstraction. it is mainly used by graphical primitives and control
+elements (i.e button \, knob) in order to easily get & set the x \,
+y coordinates of an object.;
+#X text 14 137 The subpatch below is what the vanilla version of [p.pos]
+looks like.;
+#X text 14 304 It should only be called by abstractions that are located
+inside the same 'gl' folder so you should not type the library path
+'gl/' into the object box.;
+#X text 14 394 Any abstraction that uses [p.pos] should also contain
+the 'pos' canvas you can see above. This is used to find out the canvas
+position when the patch runs in Gemma app.;
+#X text 14 474 inlet 0 (bang) : get x \, y coordinates of parent abstraction
+;
+#X obj 0 621 cnv 15 500 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X text 263 643 published under the GNU Public License;
+#X text 263 623 copyright by Iceblink Digital \, Inc.;
+#X text 7 623 tags: #gui \, #primitives \, #position;

@@ -1,0 +1,174 @@
+#N canvas 243 28 573 828 10;
+#X obj 10 774 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty p.display 3 12 0 18 -138934
+-1 0;
+#X obj 10 329 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 402 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 499 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 745 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X obj 88 337 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 411 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 323 796 published under the GNU Public License;
+#X text 323 776 copyright by Iceblink Digital \, Inc.;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#N canvas 335 178 836 576 helpmode 0;
+#X obj 18 96 loadbang;
+#X obj 18 127 metro 50;
+#X obj 18 159 s help.file.mode;
+#X obj 78 376 f;
+#X msg 78 281 1;
+#X obj 78 304 change;
+#X obj 78 326 t b b;
+#X obj 105 352 value help.file.nth;
+#X obj 18 512 s \$0-help.file.z;
+#X obj 78 406 + 100;
+#X obj 18 256 t b b;
+#X obj 18 471 f;
+#X msg 512 471 c \$1 \$2 \$3;
+#X obj 476 352 r \$0-help.file.bgc;
+#X obj 18 216 r \$0-help.file.get.z;
+#X obj 455 393 list;
+#X obj 455 434 route bang;
+#X obj 512 512 gl/p.rectangle x 512 y 512 w 1024 h 1024 z 1;
+#X text 14 13 *this subpatch is used to make objects in this help file
+'only visible' in the display window. and to 'refresh' the display
+window as soon as you close the help file.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 15 0;
+#X connect 3 0 9 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 6 1 7 0;
+#X connect 7 0 3 1;
+#X connect 9 0 11 1;
+#X connect 9 0 7 0;
+#X connect 10 0 11 0;
+#X connect 10 1 4 0;
+#X connect 11 0 8 0;
+#X connect 12 0 17 0;
+#X connect 13 0 15 1;
+#X connect 14 0 10 0;
+#X connect 15 0 16 0;
+#X connect 16 1 12 0;
+#X restore 492 36 pd helpmode;
+#X text 118 412 list;
+#X obj 124 265 unpack f f;
+#X floatatom 124 292 5 0 0 0 - - -, f 5;
+#X floatatom 181 292 5 0 0 0 - - -, f 5;
+#X text 198 353 change the corresponding property value.;
+#X text 188 337 - the property name \, followed by its value permits
+you to;
+#X text 118 377 reset;
+#X text 188 377 - reset all properties back to the creation settings.
+;
+#X obj 88 441 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
+;
+#X text 118 442 list;
+#X obj 88 471 cnv 17 3 17 empty empty 2 5 9 0 16 -228856 -162280 0
+;
+#X text 118 472 list;
+#X text 188 442 - outputs x \, y coordinates when touch move is detected.
+;
+#X text 188 472 - outputs x \, y coordinates when touch up is detected.
+;
+#X text 188 412 - outputs x \, y coordinates when touch down is detected.
+;
+#X text 118 505 you can set the creation arguments by using pairs of
+messages that are 'property name' and 'property value'.;
+#X text 148 544 - list of properties and value types.;
+#X text 128 306 touch down;
+#X text 110 291 x;
+#X text 168 291 y;
+#X obj 266 265 unpack f f;
+#X floatatom 266 292 5 0 0 0 - - -, f 5;
+#X floatatom 323 292 5 0 0 0 - - -, f 5;
+#X text 252 291 x;
+#X text 310 291 y;
+#X obj 409 265 unpack f f;
+#X floatatom 409 292 5 0 0 0 - - -, f 5;
+#X floatatom 466 292 5 0 0 0 - - -, f 5;
+#X text 395 291 x;
+#X text 453 291 y;
+#X text 270 306 touch move;
+#X text 413 306 touch up;
+#X text 118 337 message;
+#X text 21 37 create a display window;
+#X text 113 242 [p.display] detects touches from whole area of the
+display.;
+#X msg 25 69 c cyan;
+#X text 73 70 load color from 'gl/text/color.txt' (global color preset)
+;
+#X msg 25 99 r 120 \, g 255 \, b 170;
+#X text 152 100 change r \, g \, b values;
+#X text 114 129 set r \, g \, b value as a list;
+#X text 111 142 (only works through the inlet);
+#X msg 25 129 c 255 160 80;
+#X msg 318 114 l \$1;
+#X text 353 115 lock/unlock the device rotation;
+#X obj 318 94 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 25 171 reset;
+#X text 66 171 reset all to the creation settings;
+#X obj 318 151 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 318 171 v \$1;
+#X text 353 172 temporarily show/hide the display;
+#X obj 124 220 gl/p.display d iphone o 1 s 75 c mediumslateblue;
+#X text 310 571 p = name of preset to load* (symbol);
+#X text 310 611 c = name of color to load (symbol);
+#X text 16 611 r \, g \, b = rgb values (int: 0-255);
+#X text 16 571 d = device type* (ipad or iphone);
+#X text 310 631 a = set antialiasing*^ (int: 0-8);
+#X text 310 651 v = visible/invisible^ (int: 1/0);
+#X text 16 651 t = title of the display window*^ (symbol);
+#X text 16 591 o = orientation portrait/landscape* (int: 1/0);
+#X text 16 631 l = lock/unlock the device rotation (int: 1/0);
+#X text 16 671 j = automatic project creator on/off^ (int: 1/0);
+#N canvas 243 522 424 220 more_about_j 0;
+#X text 31 27 [p.display] not only creates the display window but also
+has the feature of automatically creating the 'Gem project' which is
+a folder that contains the main pd patch as well as 'gl' folder that
+has all the necessary local files such as images \, fonts \, audio
+and text files.;
+#X text 31 147 this project creating feature will be automatically
+done whenever you save the patch to a new location. you can turn on/off
+this feature by setting the 'j' property.;
+#X text 31 107 The 'Gem project' is required to run the GemmaLib based
+pd patch on mobile devices through the 'Gemma' app.;
+#X restore 16 692 pd more_about_j;
+#X text 310 591 s = screen ratio*^ (% of real dimension);
+#X text 136 705 * : these properties can only be set as a creation
+argument.;
+#X text 136 722 ^ : these properties will have no effect on the mobile
+;
+#X text 465 722 device.;
+#X text 348 132 (useful to lock it if your patch;
+#X text 354 146 uses the accelerometer receiver);
+#X text 17 776 tags: #gui \, #primitives \, #display;
+#X connect 13 0 14 0;
+#X connect 13 1 15 0;
+#X connect 32 0 33 0;
+#X connect 32 1 34 0;
+#X connect 37 0 38 0;
+#X connect 37 1 39 0;
+#X connect 47 0 62 0;
+#X connect 49 0 62 0;
+#X connect 53 0 62 0;
+#X connect 54 0 62 0;
+#X connect 56 0 54 0;
+#X connect 57 0 62 0;
+#X connect 59 0 60 0;
+#X connect 60 0 62 0;
+#X connect 62 0 13 0;
+#X connect 62 1 32 0;
+#X connect 62 2 37 0;

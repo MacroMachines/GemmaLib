@@ -1,0 +1,5 @@
+<desc>;
+numeric key values from keyboard.;
+
+<args>;
+arguments: none.;

@@ -1,0 +1,5 @@
+<desc>;
+cheap reciprocal square root (beware 8 bits!).;
+
+<args>;
+argument: none.;

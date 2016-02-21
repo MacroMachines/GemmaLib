@@ -1,0 +1,5 @@
+<desc>;
+tangent function.;
+
+<args>;
+argument: none.;

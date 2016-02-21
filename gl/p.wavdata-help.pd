@@ -1,0 +1,66 @@
+#N canvas 0 22 576 649 10;
+#X obj 10 591 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty p.wavdata 3 12 0 18 -138934
+-1 0;
+#X obj 10 386 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 450 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 531 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 562 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X obj 88 395 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 459 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 323 613 published under the GNU Public License;
+#X text 323 593 copyright by Iceblink Digital \, Inc.;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#X text 108 536 (none);
+#X text 108 394 load;
+#X text 178 394 - the "load" message \, followed by the name(or relative
+path);
+#X text 190 411 of a wav file without ".wav" \, permits you to load
+the file.;
+#X text 190 428 *file name(or path) should not contain any space.;
+#X text 108 458 float;
+#X obj 88 483 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
+;
+#X text 108 482 float;
+#X obj 88 507 cnv 17 3 17 empty empty 2 5 9 0 16 -228856 -162280 0
+;
+#X text 108 506 float;
+#X text 178 482 - number of channels;
+#X text 178 458 - samplerate in Hz;
+#X text 178 506 - bit depth;
+#X text 204 278 *file name(or path) should not contain any space.;
+#X floatatom 118 343 6 0 0 0 - - -, f 6;
+#X floatatom 217 343 6 0 0 0 - - -, f 6;
+#X floatatom 304 343 6 0 0 0 - - -, f 6;
+#X text 106 361 samplerate;
+#X text 211 361 channels;
+#X text 296 361 bit depth;
+#X obj 183 298 gl/p.wavdata;
+#X text 200 263 (e.g to load "/audio/bell.wav" \, send "load bell")
+;
+#X msg 183 202 load example/drumloop;
+#X msg 203 224 load example/vocal;
+#X text 200 248 you should use relative path from 'audio' folder.;
+#X text 179 182 load a wav file from 'gl/audio/example' folder.;
+#X text 21 37 get data of a wav file;
+#X text 17 593 tags: #primitives \, #wav;
+#X text 10 56 [p.wavdata] is mainly used by wav file player abstractions
+to find out the information of a wav file.;
+#X text 10 93 It can be useful especially if you want to let users
+to properly play their own wav files regardless of the samplerate and
+the number of channels.;
+#X text 10 143 You can find [a.wavsampler2~] to see how [p.wavdata]
+can be used for such purpose.;
+#X connect 31 0 25 0;
+#X connect 31 1 26 0;
+#X connect 31 2 27 0;
+#X connect 33 0 31 0;
+#X connect 34 0 31 0;

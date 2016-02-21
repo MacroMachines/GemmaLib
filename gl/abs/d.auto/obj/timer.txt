@@ -1,0 +1,5 @@
+<desc>;
+measure time intervals.;
+
+<args>;
+arguments: none.;

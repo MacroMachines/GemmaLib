@@ -1,0 +1,5 @@
+<desc>;
+measure CPU time.;
+
+<args>;
+arguments: none.;

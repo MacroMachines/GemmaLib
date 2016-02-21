@@ -1,0 +1,41 @@
+#N canvas 0 22 652 450 10;
+#X obj 143 419 outlet accel.x;
+#X obj 275 419 outlet accel.y;
+#X obj 408 419 outlet accel.z;
+#X obj 143 350 r g.accel.x;
+#X obj 408 350 r g.accel.z;
+#X obj 275 350 r g.accel.y;
+#X obj 275 164 r g.patchid;
+#X obj 275 187 spigot 1;
+#X obj 275 209 t b f;
+#X msg 331 187 0;
+#X obj 143 382 route;
+#X obj 275 382 route;
+#X obj 408 382 route;
+#X msg 153 226 1;
+#X obj 153 252 s g.accel;
+#X text 21 9 [r.accel] accelerometer receiver;
+#X text 21 69 it is recommended to lock the display rotation when you
+use accelerometer feature in your app. you can do this by sending 'l
+1' to [p.display].;
+#X text 22 115 *you can only test this receiver action in the actual
+mobile device using Gemma app.;
+#X text 21 29 detects tilt of the mobile device. (x \, y \, z axis)
+;
+#X text 21 49 each tilt value ranges from -1 to 1 (float);
+#X text 22 149 tags: #receiver \, #control \, #accelerometer;
+#X connect 3 0 10 0;
+#X connect 4 0 12 0;
+#X connect 5 0 11 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 0 13 0;
+#X connect 8 1 10 1;
+#X connect 8 1 11 1;
+#X connect 8 1 12 1;
+#X connect 9 0 7 1;
+#X connect 10 0 0 0;
+#X connect 11 0 1 0;
+#X connect 12 0 2 0;
+#X connect 13 0 14 0;

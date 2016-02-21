@@ -1,0 +1,5 @@
+<desc>;
+create a subpatch.;
+
+<args>;
+1) symbol: a name for the subpatch.;

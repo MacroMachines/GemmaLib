@@ -1,0 +1,5 @@
+<desc>;
+add a signal outlet to a [pd].;
+
+<args>;
+arguments: none.;

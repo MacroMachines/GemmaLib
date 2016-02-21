@@ -1,0 +1,5 @@
+<desc>;
+white noise generator.;
+
+<args>;
+arguments: none.;

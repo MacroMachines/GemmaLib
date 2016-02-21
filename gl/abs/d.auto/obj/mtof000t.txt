@@ -1,0 +1,5 @@
+<desc>;
+convert MIDI to its corresponding frequency.(signal value);
+
+<args>;
+argument: none.;

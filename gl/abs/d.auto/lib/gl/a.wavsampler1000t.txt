@@ -1,0 +1,5 @@
+<desc>;
+advanced wav file player with mono output.;
+
+<args>;
+1) symbol: name of the wav file to load.;

@@ -1,0 +1,5 @@
+<desc>;
+attack detector.;
+
+<args>;
+please refer to the [bonk~] help file.;

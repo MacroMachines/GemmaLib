@@ -1,0 +1,6 @@
+<desc>;
+Pd lists to OSC messages.;
+
+<args>;
+please refer to the [oscformat] help file.;
+

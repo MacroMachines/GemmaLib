@@ -1,0 +1,5 @@
+<desc>;
+cosine function.;
+
+<args>;
+argument: none.;

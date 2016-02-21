@@ -1,0 +1,15 @@
+<desc>;
+draw a rectangle to the display window.;
+
+<args>;
+x\, y = x and y coordinates in pixels (float);
+p = name of preset to load (symbol);
+w\, h = width and height in pixels (float);
+s = size in pixels (float);
+r\, g\, b\, a = rgba values (int: 0-255);
+c = name of color to load (symbol);
+d = degree of z-axis rotation (float);
+f = fill/unfill (int: 1/0);
+l = line width in pixels when unfilled (float);
+z = z-order(drawing order) (int: 1-100);
+v = visible/invisible (int: 1/0);

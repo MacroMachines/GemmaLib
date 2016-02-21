@@ -1,0 +1,6 @@
+<desc>;
+OSC messages to Pd lists.;
+
+<args>;
+arguments: none.;
+

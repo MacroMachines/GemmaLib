@@ -1,0 +1,109 @@
+#N canvas 243 28 572 698 10;
+#X obj 10 643 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty p.font 3 12 0 18 -138934 -1
+0;
+#X obj 10 376 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 451 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 490 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 614 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X obj 88 384 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 323 665 published under the GNU Public License;
+#X text 323 645 copyright by Iceblink Digital \, Inc.;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#N canvas 335 178 836 576 helpmode 0;
+#X obj 18 96 loadbang;
+#X obj 18 127 metro 50;
+#X obj 18 159 s help.file.mode;
+#X obj 78 376 f;
+#X msg 78 281 1;
+#X obj 78 304 change;
+#X obj 78 326 t b b;
+#X obj 105 352 value help.file.nth;
+#X obj 18 512 s \$0-help.file.z;
+#X obj 78 406 + 100;
+#X obj 18 256 t b b;
+#X obj 18 471 f;
+#X msg 512 471 c \$1 \$2 \$3;
+#X obj 476 352 r \$0-help.file.bgc;
+#X obj 18 216 r \$0-help.file.get.z;
+#X obj 455 393 list;
+#X obj 455 434 route bang;
+#X obj 512 512 gl/p.rectangle x 512 y 512 w 1024 h 1024 z 1;
+#X text 14 13 *this subpatch is used to make objects in this help file
+'only visible' in the display window. and to 'refresh' the display
+window as soon as you close the help file.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 15 0;
+#X connect 3 0 9 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 6 1 7 0;
+#X connect 7 0 3 1;
+#X connect 9 0 11 1;
+#X connect 9 0 7 0;
+#X connect 10 0 11 0;
+#X connect 10 1 4 0;
+#X connect 11 0 8 0;
+#X connect 12 0 17 0;
+#X connect 13 0 15 1;
+#X connect 14 0 10 0;
+#X connect 15 0 16 0;
+#X connect 16 1 12 0;
+#X restore 492 36 pd helpmode;
+#X obj 10 59 gl/p.display d iphone o 1;
+#X text 170 60 display window;
+#X text 118 424 reset;
+#X text 118 384 message;
+#X obj 39 191 gl/p.font 1 arial.ttf 2 arial_bold.ttf 3 arial_italic.ttf
+;
+#X floatatom 160 280 5 1 3 0 - - -, f 5;
+#X msg 160 304 f \$1;
+#X text 198 280 try loading different fonts;
+#X text 198 305 (this will load one of the stored fonts in 'p.font')
+;
+#X text 118 461 (none);
+#X text 38 249 if you don't create [p.font] \, the default font 'arial.ttf'
+;
+#X text 38 235 the font files are located in 'gl/font/' directory.
+;
+#X text 391 249 will be used by [p.label].;
+#X text 21 37 store fonts that can be used by 'p.label';
+#X msg 39 90 1 arial_bold_italic.ttf;
+#X text 193 90 replace the font which is stored in the first slot;
+#X text 39 209 you can store up to 10 different fonts to be used at
+once.;
+#X msg 74 158 reset;
+#X text 119 158 reset all to the creation settings;
+#X text 188 424 - reset all back to the creation settings.;
+#X text 118 496 you can set the creation arguments by using pairs of
+messages that are 'the number of font slot' and 'font file;
+#X text 472 509 name'.;
+#X text 118 526 (e.g. 1 arial_bold.ttf 2 arial_italic.ttf...);
+#X text 118 546 *the number of font slot ranges between 1 to 10 (int)
+;
+#X text 118 566 *font file name should have an extension (.ttf or .otf)
+;
+#X text 118 586 *font file name(or path) should not contain any space.
+;
+#X obj 160 340 gl/p.label x 160 y 340 s 60 t Hello_World f 1 c yellow
+;
+#X msg 74 124 p default;
+#X text 139 125 load a preset from 'gl/text/p.font.txt';
+#X text 198 400 change the corresponding property value.;
+#X text 188 384 - the property name \, followed by its value permits
+you to;
+#X text 17 645 tags: #gui \, #primitives \, #font;
+#X connect 16 0 17 0;
+#X connect 17 0 37 0;
+#X connect 25 0 15 0;
+#X connect 28 0 15 0;
+#X connect 38 0 15 0;

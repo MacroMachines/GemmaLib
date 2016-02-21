@@ -1,0 +1,7 @@
+<desc>;
+test for matching numbers or symbols.;
+
+<args>;
+n) float or symbol: creates an outlet for each creation argument.;
+floats and symbols may not be mixed.;
+

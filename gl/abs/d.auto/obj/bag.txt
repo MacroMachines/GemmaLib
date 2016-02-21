@@ -1,0 +1,5 @@
+<desc>;
+collection of numbers.;
+
+<args>;
+argument: none.;

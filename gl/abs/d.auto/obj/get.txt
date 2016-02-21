@@ -1,0 +1,6 @@
+<desc>;
+get values from a scalar.;
+
+<args>;
+1) symbol: a struct name to specify the template of a scalar.;
+n) symbol: the name of a field or fields in that template.;

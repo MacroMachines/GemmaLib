@@ -1,0 +1,5 @@
+<desc>;
+expression evaluation of signal data.;
+
+<args>;
+argument: expression.;

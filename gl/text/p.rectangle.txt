@@ -1,0 +1,1 @@
+default s 100 c default a 255 d 0 f 1 l 2 v 1;

@@ -1,0 +1,5 @@
+<desc>;
+precision conversion of a signal to a number on demand.;
+
+<args>;
+argument: none.;

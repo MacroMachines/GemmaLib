@@ -1,0 +1,5 @@
+<desc>;
+serial device control for NT only.;
+
+<args>;
+arguments: none.;

@@ -1,0 +1,1 @@
+default w 50 h 250 o 6 c default a 255 l 2 v 1;

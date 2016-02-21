@@ -1,0 +1,5 @@
+<desc>;
+read numbers from a table with 4-point interpolation.;
+
+<args>;
+1) symbol: informs [tabread] which array to read.;

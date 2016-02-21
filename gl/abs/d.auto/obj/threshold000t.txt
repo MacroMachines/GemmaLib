@@ -1,0 +1,8 @@
+<desc>;
+detect signal thresholds.;
+
+<args>;
+1) float: trigger threshold.;
+2) float: trigger debounce time (ms).;
+3) float: rest threshold.;
+4) float: rest debounce time (ms).;

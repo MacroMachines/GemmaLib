@@ -1,0 +1,5 @@
+<desc>;
+print out messages.;
+
+<args>;
+1) symbol: the symbol - followed by a colon - will precede the output\, when it is sent to the console.;

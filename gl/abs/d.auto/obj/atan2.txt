@@ -1,0 +1,5 @@
+<desc>;
+produces the arctangent of the quotient of its two arguments.;
+
+<args>;
+argument: none.;

@@ -1,0 +1,7 @@
+<desc>;
+reads incoming values and reports them.;
+
+<args>;
+1) float: a single MIDI channel number from which to read.;
+
+

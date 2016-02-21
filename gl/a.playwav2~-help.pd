@@ -1,0 +1,132 @@
+#N canvas 0 22 574 818 10;
+#X obj 10 761 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty a.playwav2~ 3 12 0 18 -138934
+-1 0;
+#X obj 10 386 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 561 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 668 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 732 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X obj 88 395 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 570 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 108 569 signal;
+#X text 323 783 published under the GNU Public License;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#X obj 208 356 dac~;
+#X text 323 763 copyright by Iceblink Digital \, Inc.;
+#X obj 188 328 *~ 0.5;
+#X msg 62 151 5000;
+#X msg 62 77 bang;
+#X msg 62 127 1000 2700;
+#X msg 62 102 stop;
+#X text 108 394 bang;
+#X text 108 422 stop;
+#X text 108 450 list;
+#X text 108 478 float;
+#X text 177 422 - stop playback.;
+#X obj 88 618 cnv 17 3 17 empty empty 2 5 9 0 16 -228856 -162280 0
+;
+#X text 108 617 float;
+#X text 90 688 1) symbol;
+#X text 136 102 stop playback.;
+#X text 178 569 - the outgoing audio signal. (left channel);
+#X text 108 506 load;
+#X text 177 506 - the "load" message \, followed by the name(or relative
+path);
+#X text 338 228 mono wav file;
+#X text 189 523 of a wav file without ".wav" \, permits you to load
+the file.;
+#X text 177 450 - play the certain time range(from \, to) in a wav
+file. (ms);
+#X text 177 478 - play a wav file from certain time to end. (ms);
+#X text 178 394 - play a wav file from beginning to end.;
+#X text 178 617 - time length of the loaded wav file. (ms);
+#X text 178 688 - the name(or relative path) of the wav file to load.
+;
+#X text 187 539 *file name(or path) should not contain any space.;
+#X text 190 706 *file name(or path) should not contain any space.;
+#X text 136 149 play the wav file from 5000ms to end.;
+#X text 136 77 play the wav file from beginning to end.;
+#X text 136 126 play the certain range(1000ms ~ 2700ms) in the wav
+file.;
+#X text 338 207 stereo wav file;
+#X text 214 278 *file name(or path) should not contain any space.;
+#X obj 243 328 *~ 0.5;
+#X obj 88 594 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
+;
+#X text 108 593 signal;
+#X text 178 593 - the outgoing audio signal. (right channel);
+#X text 35 323 *both channels will be;
+#X text 41 340 used even if you load;
+#X text 41 356 a mono wav file.;
+#X floatatom 298 356 7 0 0 0 - - -, f 7;
+#X obj 353 328 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 370 326 -> end of playback. (bang);
+#X text 343 355 -> total length of the wav file. (ms);
+#X obj 88 642 cnv 17 3 17 empty empty 3 5 9 0 16 -228856 -162280 0
+;
+#X text 108 641 bang;
+#X text 178 641 - outputs bang after finishing the playback.;
+#N canvas 4 23 229 259 d.dspstate 0;
+#X obj 82 26 r pd;
+#X obj 82 52 route dsp;
+#X msg 101 138 1;
+#X obj 51 169 sig~;
+#X obj 51 193 snapshot~;
+#X obj 82 109 t b b b;
+#X msg 130 138 set 0;
+#X obj 51 138 del 10;
+#X obj 19 1 cnv 15 40 18 empty empty dsp 9 9 1 15 -233017 -66577 0
+;
+#X obj 0 0 tgl 20 0 \$0-d.dspstate-s \$0-d.dspstate-r empty 17 7 0
+10 -228856 -1 -1 0 1;
+#X msg 51 223 set \$1;
+#X obj 0 79 s pd;
+#X msg 0 52 dsp \$1;
+#X obj 128 26 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 7 0;
+#X connect 5 1 2 0;
+#X connect 5 2 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 5 0;
+#X coords 0 -1 1 1 60 20 2 0 0;
+#X restore 502 57 pd d.dspstate;
+#X text 210 263 (e.g to load "/audio/bell.wav" \, send "load bell")
+;
+#X msg 188 207 load example/drumloop;
+#X msg 206 229 load example/vocal;
+#X obj 188 296 a.playwav2~ example/drumloop;
+#X text 210 248 you should use relative path from 'audio' folder.;
+#X text 185 186 load a new wav file from 'gl/audio/example' folder.
+;
+#X text 21 37 play a wav file in stereo;
+#X text 17 763 tags: #audio \, #sampler \, #wav;
+#X connect 13 0 11 0;
+#X connect 14 0 62 0;
+#X connect 15 0 62 0;
+#X connect 16 0 62 0;
+#X connect 17 0 62 0;
+#X connect 44 0 11 1;
+#X connect 60 0 62 0;
+#X connect 61 0 62 0;
+#X connect 62 0 13 0;
+#X connect 62 1 44 0;
+#X connect 62 2 51 0;
+#X connect 62 3 52 0;

@@ -1,0 +1,1 @@
+default s 40 c default a 255 d 0 f 1 t Label l 0 v 1;

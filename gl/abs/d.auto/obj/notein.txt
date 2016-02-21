@@ -1,0 +1,6 @@
+<desc>;
+reads incoming MIDI notes and reports their note number\, velocity and channel number.;
+
+<args>;
+1) float: the midi channel number from which to read.;
+

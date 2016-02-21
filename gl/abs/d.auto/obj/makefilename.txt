@@ -1,0 +1,5 @@
+<desc>;
+format a symbol with a variable field.;
+
+<args>;
+1) symbol: generates symbols according to a format string (the argument)\, for use as a series of filesnames\, table names\, etc.;

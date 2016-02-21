@@ -1,0 +1,5 @@
+<desc>;
+maximum of 2 audio signal inputs.;
+
+<args>;
+1) float: initialize the right inlet.;

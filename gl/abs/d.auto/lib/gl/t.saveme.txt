@@ -1,0 +1,7 @@
+<desc>;
+text file based state saving abstraction (vanilla only).;
+
+<args>;
+1) symbol: name of the parameter. should be unique against all others with the same heroID.;
+2) symbol: ID of the ’t.myhero’ object that will load/call the parameters.;
+3) float: loading order. must be int > 0.;

@@ -1,0 +1,5 @@
+<desc>;
+get data of a wav file.;
+
+<args>;
+argument: none.;

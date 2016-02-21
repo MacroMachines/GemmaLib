@@ -1,0 +1,5 @@
+<desc>;
+summing signal bus and non-local connection.;
+
+<args>;
+1) symbol: takes the name of the [throw~] summing bus.;

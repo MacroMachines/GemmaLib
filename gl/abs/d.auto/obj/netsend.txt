@@ -1,0 +1,5 @@
+<desc>;
+send messages over the internet or a network.;
+
+<args>;
+1) float: 0 or none for TCP\, nonzero for UDP.;

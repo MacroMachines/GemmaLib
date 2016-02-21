@@ -1,0 +1,6 @@
+<desc>;
+set values in a scalar.;
+
+<args>;
+1) symbol: the template of a scalar.;
+n) symbol: all subsequent arguments are names of fields.;

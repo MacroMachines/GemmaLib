@@ -1,0 +1,5 @@
+<desc>;
+will output pseudorandom integers from 0 to N-1 where N is the creation argument.;
+
+<args>;
+1) float: initialize the range.;

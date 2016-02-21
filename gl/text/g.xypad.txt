@@ -1,0 +1,1 @@
+default s 250 t 18 c default a 255 l 2 v 1;

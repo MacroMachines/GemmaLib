@@ -1,0 +1,5 @@
+<desc>;
+raise a signal to a numeric power (given by another signal).;
+
+<args>;
+1) optional creation argument initializes right inlet.;

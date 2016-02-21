@@ -1,0 +1,5 @@
+<desc>;
+print out raw values of a signal.;
+
+<args>;
+argument: none.;

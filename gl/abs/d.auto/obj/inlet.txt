@@ -1,0 +1,5 @@
+<desc>;
+add an inlet to a [pd].;
+
+<args>;
+arguments: none.;

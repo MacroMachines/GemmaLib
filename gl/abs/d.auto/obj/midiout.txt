@@ -1,0 +1,5 @@
+<desc>;
+use this to output raw MIDI. (the second inlet is the port number);
+
+<args>;
+1) float: ???.;

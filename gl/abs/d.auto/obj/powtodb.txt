@@ -1,0 +1,5 @@
+<desc>;
+converts from power units to decibels.;
+
+<args>;
+arguments: none.;

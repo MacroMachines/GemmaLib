@@ -1,0 +1,6 @@
+<desc>;
+cosine.;
+
+<args>;
+argument: none.;
+

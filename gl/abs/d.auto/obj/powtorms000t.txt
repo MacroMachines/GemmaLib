@@ -1,0 +1,5 @@
+<desc>;
+acoustic conversions: power to RMS.;
+
+<args>;
+argument: none.;

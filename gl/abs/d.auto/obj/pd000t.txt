@@ -1,0 +1,5 @@
+<desc>;
+run a pd sub-process.;
+
+<args>;
+please refer to the [pd~] help file.;

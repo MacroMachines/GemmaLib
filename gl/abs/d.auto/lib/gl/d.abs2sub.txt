@@ -1,0 +1,5 @@
+<desc>;
+create a subpatch and copy/paste contents of the target abstraction.;
+
+<args>;
+1) symbol: target abstraction name(or path) to copy from 'gl/abs/‘ folder without the ’pd’ extension.;

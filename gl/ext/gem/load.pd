@@ -1,0 +1,16 @@
+#N canvas 0 22 180 173 10;
+#X obj 65 64 Gem;
+#N canvas 0 22 450 300 error 0;
+#X obj 59 54 loadbang;
+#X msg 59 80 symbol Gem;
+#X obj 59 131 sel 0;
+#X obj 59 181 print Error;
+#X msg 59 156 Failed to load GEM library. Please download and install
+GEM.;
+#X obj 59 105 gl/ext/iemguts/classtest;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 4 0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X restore 65 85 pd error;

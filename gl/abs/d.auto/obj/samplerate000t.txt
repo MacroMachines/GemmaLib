@@ -1,0 +1,5 @@
+<desc>;
+get the current sample rate.;
+
+<args>;
+argument: none.;

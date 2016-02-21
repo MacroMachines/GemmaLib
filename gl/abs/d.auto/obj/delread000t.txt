@@ -1,0 +1,6 @@
+<desc>;
+read a signal from a delay line.;
+
+<args>;
+1) symbol: name of the delay line.;
+2) float: (optional) initial delay time in milliseconds.;

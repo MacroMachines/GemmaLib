@@ -1,0 +1,6 @@
+<desc>;
+4-point-interpolating table lookup.;
+
+<args>;
+1) symbol: the name of the array from which [tableread4~] will read data.;
+

@@ -1,0 +1,5 @@
+<desc>;
+high precision audio ramp generator.;
+
+<args>;
+argument: none.;

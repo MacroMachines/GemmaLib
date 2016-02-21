@@ -1,0 +1,14 @@
+<desc>;
+draw a horizontal slider to the display window.;
+
+<args>;
+x\, y = x and y coordinates in pixels (float);
+p = name of preset to load (symbol);
+w\, h = width and height in pixels (float);
+c = name of color to load (symbol);
+l = line width in pixels (float);
+r\, g\, b\, a = rgba values (int: 0-255);
+v = visible/invisible (int: 1/0);
+z = z-order(drawing order) (int: 1-100);
+i = initialize(set) value (float: 0-1);
+o = size offset of thumb (float);

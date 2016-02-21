@@ -1,0 +1,5 @@
+<desc>;
+filter with multiple modes.;
+
+<args>;
+argument: none.;

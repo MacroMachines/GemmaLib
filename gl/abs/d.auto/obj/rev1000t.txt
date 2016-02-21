@@ -1,0 +1,5 @@
+<desc>;
+a simple 1-in\, 1-out reverberator.;
+
+<args>;
+argument: none.;

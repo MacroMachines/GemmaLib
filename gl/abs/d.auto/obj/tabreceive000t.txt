@@ -1,0 +1,5 @@
+<desc>;
+read a block of a signal from an array continously.;
+
+<args>;
+1) symbol: the name of an array to read from.;

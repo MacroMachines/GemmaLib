@@ -1,0 +1,5 @@
+<desc>;
+computes the logarithm of the left inlet\, to the base ‘e’ (about 2.718) or to another base specified by the inlet or a creation argument.;
+
+<args>;
+1) optional creation argument initializes right inlet.;

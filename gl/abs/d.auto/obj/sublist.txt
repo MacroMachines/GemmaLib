@@ -1,0 +1,6 @@
+<desc>;
+get a list from a field of a scalar.;
+
+<args>;
+1) symbol: template name.;
+n) symbol: field name.;

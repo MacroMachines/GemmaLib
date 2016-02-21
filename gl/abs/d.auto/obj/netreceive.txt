@@ -1,0 +1,7 @@
+<desc>;
+receive messages over the internet or a network.;
+
+<args>;
+1) optional -u flag for UDP.;
+2) optional -b flag for binary.;
+3) optional port number.;

@@ -1,0 +1,5 @@
+<desc>;
+shift signal vector elements left or right.;
+
+<args>;
+1) float: the direction and the amount of the shift.;

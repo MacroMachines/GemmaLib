@@ -1,0 +1,5 @@
+<desc>;
+complex forward discrete Fourier transform.;
+
+<args>;
+argument: none.;

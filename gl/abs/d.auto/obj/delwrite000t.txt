@@ -1,0 +1,6 @@
+<desc>;
+write a signal to a delay line.;
+
+<args>;
+1) symbol: name of the delay line.;
+2) float: length of the delay line in milliseconds.;

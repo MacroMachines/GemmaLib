@@ -1,0 +1,5 @@
+<desc>;
+play a wav file in stereo.;
+
+<args>;
+1) symbol: name of the wav file to load.;

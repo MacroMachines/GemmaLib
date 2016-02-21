@@ -1,0 +1,7 @@
+<desc>;
+store fonts that can be used by ‘p.label’.;
+
+<args>;
+the number of font slot (int: 1-10);
+name of font file to store(symbol) 
+p = name of preset to load (symbol);

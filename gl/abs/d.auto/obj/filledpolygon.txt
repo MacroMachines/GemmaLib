@@ -1,0 +1,5 @@
+<desc>;
+draw a polygon;
+
+<args>;
+please refer to the [filledpolygon] help file.;

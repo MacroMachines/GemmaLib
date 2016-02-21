@@ -1,0 +1,6 @@
+<desc>;
+create a named table;
+
+<args>;
+1) symbol: name of the [table] and array contained within.;
+2) float: (optional) initial size of the array (default is 100).;

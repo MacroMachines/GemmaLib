@@ -1,0 +1,120 @@
+#N canvas 0 22 661 564 10;
+#X obj 31 224 *~;
+#X obj 32 253 dac~;
+#X obj 111 243 pow 2;
+#X obj 114 218 hsl 128 15 0 1 0 0 empty empty volume -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 111 284 line~;
+#X obj 111 263 pack f 20;
+#X obj 283 212 cnv 15 350 130 empty empty empty 20 12 0 14 -24198 -66577
+0;
+#X text 290 223 synopsis:;
+#X text 289 268 inlet1: signal (frequency);
+#X text 290 319 outlet: signal (bandlimited square at given f);
+#X obj 184 354 cnv 15 450 120 empty empty empty 20 12 0 14 -241291
+-66577 0;
+#X floatatom 262 408 7 0 0 0 - - -, f 7;
+#X text 315 410 Hz;
+#X text 194 408 border @;
+#X text 14 499 copyright by Roman Haefeli;
+#X text 14 540 published under the GNU Public License;
+#X obj 244 484 cnv 15 390 25 empty empty empty 20 12 0 14 -258699 -66577
+0;
+#X text 252 490 due to bandlimitation peaks above/below +/-1 may occur
+;
+#X obj 34 61 hsl 128 15 20 17000 1 0 empty empty frequency -2 -8 0
+10 -262144 -1 -1 0 1;
+#X obj 31 83 pack f 100;
+#X obj 31 104 line~;
+#X msg 18 453 version 0.2.0;
+#X text 220 83 if the instance containing the tables is deleted \,
+the other instances won't work anymore. reload the patch then.;
+#X text 261 361 try different values for <number of tables>:;
+#X text 289 302 inlet3: float (set phase);
+#X text 289 285 inlet2: signal (pulse width);
+#X obj 73 125 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 70 146 sig~;
+#N canvas 573 67 190 308 compute_bandlimited_range 0;
+#X msg 21 34 get_num_of_tables;
+#X obj 21 97 route num_of_tables;
+#X obj 21 12 loadbang;
+#X obj 21 128 t b f;
+#X obj 21 152 samplerate~;
+#X obj 21 174 / 2;
+#X obj 21 203 /;
+#X obj 21 229 outlet;
+#X obj 21 56 s BLSAW;
+#X obj 21 76 r BLSAW;
+#X obj 51 177 + 1;
+#X connect 0 0 8 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 3 1 10 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 9 0 1 0;
+#X connect 10 0 6 1;
+#X restore 262 383 pd compute_bandlimited_range;
+#X text 260 431 if frequency above border -> bandlimited pulse;
+#X text 260 447 if frequency below border -> raw pulse;
+#X text 71 107 pulse width (0 ~ 1);
+#X obj 31 175 a.blpulse~ 40;
+#X text 219 28 if [a.blpulse~] is instantiated more than once \, only
+the first instance creates the tables. if the argument value differs
+\, the biggest is taken.;
+#X text 221 129 the number of tables is at the same time the number
+of harmonics of the table with the highest number of harmonics. this
+value defines also the frequency \, below which [a.blpulse~] switches
+to a raw pulse.;
+#X text 14 519 modified by Iceblink Digital \, Inc.;
+#X text 289 250 [a.blpulse~ <number of tables>];
+#N canvas 4 23 229 259 d.dspstate 0;
+#X obj 82 26 r pd;
+#X obj 82 52 route dsp;
+#X msg 101 138 1;
+#X obj 51 169 sig~;
+#X obj 51 193 snapshot~;
+#X obj 82 109 t b b b;
+#X msg 130 138 set 0;
+#X obj 51 138 del 10;
+#X obj 19 1 cnv 15 40 18 empty empty dsp 9 9 1 15 -233017 -66577 0
+;
+#X obj 0 0 tgl 20 0 \$0-d.dspstate-s \$0-d.dspstate-r empty 17 7 0
+10 -228856 -1 -1 0 1;
+#X msg 51 223 set \$1;
+#X obj 0 79 s pd;
+#X msg 0 52 dsp \$1;
+#X obj 128 26 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 7 0;
+#X connect 5 1 2 0;
+#X connect 5 2 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 5 0;
+#X coords 0 -1 1 1 60 20 2 0 0;
+#X restore 582 17 pd d.dspstate;
+#X text 14 478 tags: #audio \, #oscillator;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 1;
+#X connect 5 0 4 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 32 0;
+#X connect 26 0 27 0;
+#X connect 27 0 32 1;
+#X connect 28 0 11 0;
+#X connect 32 0 0 0;

@@ -1,0 +1,126 @@
+#N canvas 0 22 574 794 10;
+#X obj 10 737 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty a.playwav1~ 3 12 0 18 -138934
+-1 0;
+#X obj 10 386 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 561 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 644 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 708 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X obj 88 395 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 570 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 108 569 signal;
+#X text 323 759 published under the GNU Public License;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#X obj 208 356 dac~;
+#X text 323 739 copyright by Iceblink Digital \, Inc.;
+#X obj 208 328 *~ 0.5;
+#X msg 82 151 5000;
+#X msg 82 77 bang;
+#X msg 82 127 1000 2700;
+#X msg 82 102 stop;
+#X text 108 394 bang;
+#X text 108 422 stop;
+#X text 108 450 list;
+#X text 108 478 float;
+#X text 177 422 - stop playback.;
+#X obj 88 594 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
+;
+#X text 108 593 float;
+#X text 90 664 1) symbol;
+#X text 156 102 stop playback.;
+#X text 178 569 - the outgoing audio signal. (left channel);
+#X text 108 506 load;
+#X text 177 506 - the "load" message \, followed by the name(or relative
+path);
+#X text 358 228 mono wav file;
+#X text 189 523 of a wav file without ".wav" \, permits you to load
+the file.;
+#X text 177 450 - play the certain time range(from \, to) in a wav
+file. (ms);
+#X text 177 478 - play a wav file from certain time to end. (ms);
+#X text 178 394 - play a wav file from beginning to end.;
+#X text 178 664 - the name(or relative path) of the wav file to load.
+;
+#X text 187 539 *file name(or path) should not contain any space.;
+#X text 190 682 *file name(or path) should not contain any space.;
+#X text 156 149 play the wav file from 5000ms to end.;
+#X text 156 77 play the wav file from beginning to end.;
+#X text 156 126 play the certain range(1000ms ~ 2700ms) in the wav
+file.;
+#X text 358 207 stereo wav file;
+#X text 234 278 *file name(or path) should not contain any space.;
+#X text 59 359 load a stereo wav file.;
+#X text 55 326 *only the left channel;
+#X text 61 343 will be used if you;
+#X floatatom 281 358 7 0 0 0 - - -, f 7;
+#X obj 355 328 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 372 326 -> end of playback. (bang);
+#X text 329 355 -> total length of the wav file. (ms);
+#X obj 88 618 cnv 17 3 17 empty empty 2 5 9 0 16 -228856 -162280 0
+;
+#X text 108 617 bang;
+#X text 178 617 - outputs bang after finishing the playback.;
+#X text 178 593 - total length of the loaded wav file. (ms);
+#N canvas 4 23 229 259 d.dspstate 0;
+#X obj 82 26 r pd;
+#X obj 82 52 route dsp;
+#X msg 101 138 1;
+#X obj 51 169 sig~;
+#X obj 51 193 snapshot~;
+#X obj 82 109 t b b b;
+#X msg 130 138 set 0;
+#X obj 51 138 del 10;
+#X obj 19 1 cnv 15 40 18 empty empty dsp 9 9 1 15 -233017 -66577 0
+;
+#X obj 0 0 tgl 20 0 \$0-d.dspstate-s \$0-d.dspstate-r empty 17 7 0
+10 -228856 -1 -1 0 1;
+#X msg 51 223 set \$1;
+#X obj 0 79 s pd;
+#X msg 0 52 dsp \$1;
+#X obj 128 26 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 7 0;
+#X connect 5 1 2 0;
+#X connect 5 2 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 5 0;
+#X coords 0 -1 1 1 60 20 2 0 0;
+#X restore 502 57 pd d.dspstate;
+#X text 230 263 (e.g to load "/audio/bell.wav" \, send "load bell")
+;
+#X msg 208 207 load example/drumloop;
+#X msg 226 229 load example/vocal;
+#X obj 208 296 a.playwav1~ example/vocal;
+#X text 230 248 you should use relative path from 'audio' folder.;
+#X text 205 186 load a new wav file from 'gl/audio/example' folder.
+;
+#X text 21 37 play a wav file in mono;
+#X text 17 739 tags: #audio \, #sampler \, #wav;
+#X connect 13 0 11 0;
+#X connect 13 0 11 1;
+#X connect 14 0 58 0;
+#X connect 15 0 58 0;
+#X connect 16 0 58 0;
+#X connect 17 0 58 0;
+#X connect 56 0 58 0;
+#X connect 57 0 58 0;
+#X connect 58 0 13 0;
+#X connect 58 1 46 0;
+#X connect 58 2 47 0;

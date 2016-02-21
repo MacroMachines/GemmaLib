@@ -1,0 +1,5 @@
+<desc>;
+auto complete abstraction.;
+
+<args>;
+argument: none.;

@@ -1,0 +1,5 @@
+<desc>;
+2-pole-2-zero-filter.;
+
+<args>;
+1-5) float: takes five floats as arguments. More info in the help-file.;

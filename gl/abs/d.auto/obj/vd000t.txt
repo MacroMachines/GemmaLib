@@ -1,0 +1,5 @@
+<desc>;
+reads a signal from a delay line at a variable delay time.;
+
+<args>;
+1) symbol: name of the delay line.;

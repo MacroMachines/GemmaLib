@@ -1,0 +1,9 @@
+<desc>;
+declare the fields in a data structure.;
+
+<args>;
+1) symbol: the name of the struct.;
+
+n) symbol: all subsequent arguments are used to declare fields.;
+
+for more information please refer to the help file.;

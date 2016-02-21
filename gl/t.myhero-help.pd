@@ -1,0 +1,278 @@
+#N canvas 0 22 921 840 10;
+#X obj 10 10 cnv 15 900 26 empty empty t.myhero/t.saveme 3 12 0 18
+-138934 -1 0;
+#X obj 11 82 cnv 3 900 3 empty empty example 8 12 0 13 -228856 -1 0
+;
+#X obj 10 557 cnv 3 900 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 634 cnv 3 900 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 37 cnv 15 900 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#X text 21 37 text file based state saving abstractions (vanilla only)
+;
+#X obj 10 488 cnv 3 900 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X text 116 640 [t.myhero];
+#X obj 10 756 cnv 3 900 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X text 132 659 arg1: <required> Unique ID. All [t.saveme] objects
+with the same ID will store their parameters here. When in doubt \,
+use \$0.;
+#X text 132 704 arg2: <optional> name of the text file that will be
+read located in 'text' folder without extension (.txt). *file name
+should not contain any space.;
+#X text 103 188 save the current stored settings as preset2;
+#X msg 20 213 save;
+#X obj 91 300 gl/r.closebang;
+#X msg 91 326 write;
+#X text 224 353 write a new file;
+#X msg 90 351 write example/songs2;
+#X obj 20 460 gl/t.myhero \$0 example/songs;
+#X text 103 141 load a preset named 'song1';
+#X msg 20 140 load song1;
+#X msg 20 116 read example/songs;
+#X text 73 165 you can also load it by just sending the preset name
+;
+#X msg 20 164 song1;
+#X msg 20 188 save song2;
+#X text 157 242 load other presets;
+#X msg 20 313 song\$1;
+#X text 136 326 write all preset updates to the current file;
+#X obj 30 242 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 30 261 + 1;
+#X floatatom 30 282 5 0 0 0 - - -, f 5;
+#X obj 705 467 dac~;
+#X obj 593 133 hsl 128 15 48 72 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 549 134 step1;
+#X obj 732 133 gl/t.saveme step1 \$0;
+#X floatatom 590 301 5 0 0 0 - - -, f 5;
+#X obj 593 153 hsl 128 15 48 72 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 630 301 5 0 0 0 - - -, f 5;
+#X obj 593 173 hsl 128 15 48 72 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 549 154 step2;
+#X text 549 174 step3;
+#X floatatom 670 301 5 0 0 0 - - -, f 5;
+#X obj 593 193 hsl 128 15 48 72 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 549 194 step4;
+#X obj 732 153 gl/t.saveme step2 \$0;
+#X obj 732 173 gl/t.saveme step3 \$0;
+#X obj 732 193 gl/t.saveme step4 \$0;
+#X floatatom 710 301 5 0 0 0 - - -, f 5;
+#X obj 593 213 hsl 128 15 48 72 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 549 214 step5;
+#X obj 732 213 gl/t.saveme step5 \$0;
+#X floatatom 750 301 5 0 0 0 - - -, f 5;
+#X obj 593 233 hsl 128 15 48 72 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 549 234 step6;
+#X obj 732 233 gl/t.saveme step6 \$0;
+#X floatatom 790 301 5 0 0 0 - - -, f 5;
+#X obj 593 253 hsl 128 15 48 72 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 549 254 step7;
+#X obj 732 253 gl/t.saveme step7 \$0;
+#X floatatom 830 301 5 0 0 0 - - -, f 5;
+#X obj 593 273 hsl 128 15 48 72 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 549 274 step8;
+#X obj 732 273 gl/t.saveme step8 \$0;
+#X floatatom 870 301 5 0 0 0 - - -, f 5;
+#X obj 575 334 f;
+#X obj 615 334 f;
+#X obj 655 334 f;
+#X obj 695 334 f;
+#X obj 735 334 f;
+#X obj 775 334 f;
+#X obj 815 334 f;
+#X obj 855 334 f;
+#X obj 479 317 sel 0 1 2 3 4 5 6 7;
+#X obj 479 99 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 498 99 play;
+#X obj 479 133 metro 150;
+#X obj 712 405 osc~;
+#X obj 712 379 mtof;
+#X obj 479 203 f;
+#X obj 505 203 + 1;
+#X obj 479 225 % 8;
+#X obj 575 355 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 615 355 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 655 355 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 695 355 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 735 355 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 775 355 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 815 355 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 855 355 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#N canvas 4 23 229 259 d.dspstate 0;
+#X obj 82 26 r pd;
+#X obj 82 52 route dsp;
+#X msg 101 138 1;
+#X obj 51 169 sig~;
+#X obj 51 193 snapshot~;
+#X obj 82 109 t b b b;
+#X msg 130 138 set 0;
+#X obj 51 138 del 10;
+#X obj 19 1 cnv 15 40 18 empty empty dsp 9 9 1 15 -233017 -66577 0
+;
+#X obj 0 0 tgl 20 0 \$0-d.dspstate-s \$0-d.dspstate-r empty 17 7 0
+10 -228856 -1 -1 0 1;
+#X msg 51 223 set \$1;
+#X obj 0 79 s pd;
+#X msg 0 52 dsp \$1;
+#X obj 128 26 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 7 0;
+#X connect 5 1 2 0;
+#X connect 5 2 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 5 0;
+#X coords 0 -1 1 1 60 20 2 0 0;
+#X restore 849 57 pd d.dspstate;
+#X obj 712 434 *~;
+#X obj 747 417 vline~;
+#X obj 479 169 sel 1;
+#X msg 747 396 0.3 5 \, 0 100 5;
+#X text 592 114 note sequencer;
+#X text 149 118 read the text file 'gl/text/example/songs.txt';
+#X text 116 496 [t.myhero];
+#X text 132 515 inlet0: read \, write \, save \, load followed by file
+or preset name.;
+#X text 116 571 [t.myhero];
+#X text 132 590 none.;
+#X text 553 659 arg1: <required> name of the parameter. Should be unique
+against all others with the same heroID.;
+#X text 553 728 arg3: <optional> Loading order. Must be int > 0;
+#X text 536 640 [t.saveme];
+#X text 553 692 arg2: <required> ID of the [t.myhero] object that will
+load/call the parameters.;
+#X text 536 496 [t.saveme];
+#X text 536 571 [t.saveme];
+#X text 553 516 inlet0: (float \, symbol \, list) value to be stored
+when [t.myhero] receives 'save'.;
+#X text 14 59 [t.myhero] saves and loads control messages as a preset
+;
+#X text 713 59 to a single text file.;
+#X text 349 59 through [t.saveme] and writes the set of these saved
+presets;
+#X text 63 214 you can also save to the currently loaded preset this
+way;
+#X text 182 301 receive bang when the patch closes in Gemma app;
+#X text 89 388 It is highly recommended to use [r.closebang] for writing
+a text file since writing a file requires quite a high CPU usage which
+can potentially cause your patch to produce unwanted audio gitches
+especially when running the patch in your mobile device (which isn't
+as fast as your desktop).;
+#X text 553 591 outlet0: (float \, symbol \, list) value to be outputed
+when [t.myhero] receives 'load'.;
+#X obj 10 777 cnv 15 900 50 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X text 658 810 published under the GNU Public License;
+#X text 657 776 copyright by Mmb;
+#X text 658 794 modified by Iceblink Digital \, Inc.;
+#X text 17 779 tags: #text \, #preset \, #statesaving;
+#X connect 12 0 17 0;
+#X connect 13 0 14 0;
+#X connect 14 0 17 0;
+#X connect 16 0 17 0;
+#X connect 19 0 17 0;
+#X connect 20 0 17 0;
+#X connect 22 0 17 0;
+#X connect 23 0 17 0;
+#X connect 25 0 17 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 29 0 25 0;
+#X connect 31 0 33 0;
+#X connect 31 0 34 0;
+#X connect 33 0 31 0;
+#X connect 34 0 63 1;
+#X connect 35 0 36 0;
+#X connect 35 0 43 0;
+#X connect 36 0 64 1;
+#X connect 37 0 40 0;
+#X connect 37 0 44 0;
+#X connect 40 0 65 1;
+#X connect 41 0 45 0;
+#X connect 41 0 46 0;
+#X connect 43 0 35 0;
+#X connect 44 0 37 0;
+#X connect 45 0 41 0;
+#X connect 46 0 66 1;
+#X connect 47 0 49 0;
+#X connect 47 0 50 0;
+#X connect 49 0 47 0;
+#X connect 50 0 67 1;
+#X connect 51 0 53 0;
+#X connect 51 0 54 0;
+#X connect 53 0 51 0;
+#X connect 54 0 68 1;
+#X connect 55 0 57 0;
+#X connect 55 0 58 0;
+#X connect 57 0 55 0;
+#X connect 58 0 69 1;
+#X connect 59 0 61 0;
+#X connect 59 0 62 0;
+#X connect 61 0 59 0;
+#X connect 62 0 70 1;
+#X connect 63 0 76 0;
+#X connect 63 0 80 0;
+#X connect 64 0 76 0;
+#X connect 64 0 81 0;
+#X connect 65 0 76 0;
+#X connect 65 0 82 0;
+#X connect 66 0 76 0;
+#X connect 66 0 83 0;
+#X connect 67 0 76 0;
+#X connect 67 0 84 0;
+#X connect 68 0 76 0;
+#X connect 68 0 85 0;
+#X connect 69 0 76 0;
+#X connect 69 0 86 0;
+#X connect 70 0 76 0;
+#X connect 70 0 87 0;
+#X connect 71 0 63 0;
+#X connect 71 1 64 0;
+#X connect 71 2 65 0;
+#X connect 71 3 66 0;
+#X connect 71 4 67 0;
+#X connect 71 5 68 0;
+#X connect 71 6 69 0;
+#X connect 71 7 70 0;
+#X connect 72 0 74 0;
+#X connect 72 0 91 0;
+#X connect 74 0 77 0;
+#X connect 75 0 89 0;
+#X connect 76 0 75 0;
+#X connect 76 0 92 0;
+#X connect 77 0 79 0;
+#X connect 78 0 77 1;
+#X connect 79 0 78 0;
+#X connect 79 0 71 0;
+#X connect 89 0 30 0;
+#X connect 89 0 30 1;
+#X connect 90 0 89 1;
+#X connect 91 1 77 1;
+#X connect 92 0 90 0;

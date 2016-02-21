@@ -1,0 +1,5 @@
+<desc>;
+simulation of the Moog analog resonant filter.(vanilla only);
+
+<args>;
+argument: none.;

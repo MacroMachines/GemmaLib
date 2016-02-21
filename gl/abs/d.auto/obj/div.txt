@@ -1,0 +1,5 @@
+<desc>;
+gives the result of a division without any decimal numbers.;
+
+<args>;
+1) float: initial value of the right inlet.;

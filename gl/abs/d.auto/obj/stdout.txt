@@ -1,0 +1,5 @@
+<desc>;
+write messages to standard output. This is useful in conjunction with the [pd~] object.;
+
+<args>;
+argument: none.;

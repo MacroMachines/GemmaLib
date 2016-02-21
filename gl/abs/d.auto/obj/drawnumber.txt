@@ -1,0 +1,9 @@
+<desc>;
+display a numeric field of a template.;
+
+<args>;
+1) symbol: the field name of the number to draw.;
+2) float: relative x coordinate.;
+3) float: relative y coordinate.;
+4) float: RGB color.;
+5) symbol: (optional) label.;

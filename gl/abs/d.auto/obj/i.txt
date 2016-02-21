@@ -1,0 +1,5 @@
+<desc>;
+store and recall integer.;
+
+<args>;
+1) float: stores the number.;

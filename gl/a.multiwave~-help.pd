@@ -1,0 +1,114 @@
+#N canvas 0 22 578 675 10;
+#X obj 10 605 cnv 15 552 60 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty a.multiwave~ 3 12 0 18 -138934
+-1 0;
+#X obj 10 386 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 503 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 535 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 10 576 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X obj 88 395 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 512 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 423 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 450 cnv 17 3 17 empty empty 2 5 9 0 16 -228856 -162280 0
+;
+#X text 108 511 signal;
+#X text 108 394 signal;
+#X text 108 422 signal;
+#X text 323 647 published under the GNU Public License;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#X obj 188 355 dac~;
+#X obj 188 321 *~ 0.1;
+#X text 21 37 bandlimited oscillator with waveform selection;
+#X obj 191 104 hsl 128 15 20 17000 1 0 empty empty frequency -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 243 156 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 240 177 sig~;
+#X text 241 138 pulse width (0 ~ 1);
+#X msg 273 206 0;
+#X text 272 188 set phase (0 ~ 1);
+#X msg 414 156 sine;
+#X msg 414 176 triangle;
+#X msg 414 196 saw;
+#X msg 414 216 square;
+#X msg 414 236 pulse;
+#X msg 414 256 noise;
+#X text 304 277 default waveform is sine;
+#X floatatom 188 129 7 0 0 0 - - -, f 7;
+#X text 323 607 copyright by Roman Haefeli;
+#X msg 188 156 \$1 100;
+#X obj 188 177 line~;
+#X text 413 137 set waveform;
+#X text 108 449 float;
+#X obj 88 477 cnv 17 3 17 empty empty 3 5 9 0 16 -228856 -162280 0
+;
+#X text 108 476 symbol;
+#X text 90 554 1) float;
+#X text 177 476 - waveform. (sine \, triangle \, saw \, square \, pulse
+\, noise);
+#X text 177 449 - phase. (range: 0 ~ 1);
+#X text 177 422 - pulse width for pulse waveform. (range: 0 ~ 1);
+#X text 178 554 - the number of lookup table;
+#X text 178 511 - the outgoing wave. (-1 ~ 1);
+#X text 178 394 - frequency in Hz.;
+#X obj 188 273 a.multiwave~ 100;
+#X text 324 627 modified by Iceblink Digital \, Inc.;
+#N canvas 4 23 229 259 d.dspstate 0;
+#X obj 82 26 r pd;
+#X obj 82 52 route dsp;
+#X msg 101 138 1;
+#X obj 51 169 sig~;
+#X obj 51 193 snapshot~;
+#X obj 82 109 t b b b;
+#X msg 130 138 set 0;
+#X obj 51 138 del 10;
+#X obj 19 1 cnv 15 40 18 empty empty dsp 9 9 1 15 -233017 -66577 0
+;
+#X obj 0 0 tgl 20 0 \$0-d.dspstate-s \$0-d.dspstate-r empty 17 7 0
+10 -228856 -1 -1 0 1;
+#X msg 51 223 set \$1;
+#X obj 0 79 s pd;
+#X msg 0 52 dsp \$1;
+#X obj 128 26 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 7 0;
+#X connect 5 1 2 0;
+#X connect 5 2 6 0;
+#X connect 6 0 4 0;
+#X connect 7 0 4 0;
+#X connect 9 0 12 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 5 0;
+#X coords 0 -1 1 1 60 20 2 0 0;
+#X restore 502 57 pd d.dspstate;
+#X text 17 607 tags: #audio \, #oscillator;
+#X connect 16 0 15 0;
+#X connect 16 0 15 1;
+#X connect 18 0 31 0;
+#X connect 19 0 20 0;
+#X connect 20 0 46 1;
+#X connect 22 0 46 2;
+#X connect 24 0 46 3;
+#X connect 25 0 46 3;
+#X connect 26 0 46 3;
+#X connect 27 0 46 3;
+#X connect 28 0 46 3;
+#X connect 29 0 46 3;
+#X connect 31 0 33 0;
+#X connect 33 0 34 0;
+#X connect 34 0 46 0;
+#X connect 46 0 16 0;

@@ -1,0 +1,5 @@
+<desc>;
+send audio signals to a named object.;
+
+<args>;
+1) symbol: the send/receive name.;

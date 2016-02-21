@@ -1,0 +1,5 @@
+<desc>;
+takes note-off messages out of a stream of MIDI-style note messages and passes the others through unchanged.;
+
+<args>;
+argument: none.;

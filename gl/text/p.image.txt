@@ -1,0 +1,1 @@
+default s 100 c white a 255 d 0 v 1;

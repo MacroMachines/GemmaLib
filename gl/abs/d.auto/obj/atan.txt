@@ -1,0 +1,5 @@
+<desc>;
+produces the arctangent of a number as a numeric value between -Pi/2 and Pi/2.;
+
+<args>;
+argument: none.;

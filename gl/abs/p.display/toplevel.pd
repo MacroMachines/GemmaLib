@@ -1,0 +1,7 @@
+#N canvas 278 268 268 200 10;
+#X obj 30 39 gl/ext/iemguts/receivecanvas \$1;
+#X obj 30 70 s \$2-receivecanvas;
+#X obj 30 136 gl/ext/iemguts/sendcanvas \$1;
+#X obj 30 105 r \$2-sendcanvas;
+#X connect 0 0 1 0;
+#X connect 3 0 2 0;

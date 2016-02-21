@@ -1,0 +1,5 @@
+<desc>;
+receive ’n’th of the touches when any touch on the display is made.;
+
+<args>;
+argument: none.;

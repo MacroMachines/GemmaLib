@@ -1,0 +1,1 @@
+default w 200 h 140 c default a 255 d 0 l 2 v 1;

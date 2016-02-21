@@ -1,0 +1,6 @@
+<desc>;
+set environment for loading patch.;
+
+<args>;
+1) flag: -path\, -stdpath\, -lib\, -stdlib.;
+2) symbol: pathname.;

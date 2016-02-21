@@ -1,0 +1,16 @@
+<desc>;
+create a display window.;
+
+<args>;
+d = device type (ipad or iphone);
+p = name of preset to load (symbol);
+o = orientation portrait/landscape (int: 1/0);
+s = screen ratio (% of real dimension);
+r\, g\, b = rgb values (int: 0-255);
+c = name of color to load (symbol);
+l = lock/unlock the device rotation (int: 1/0);
+a = set antialiasing (int: 0-8);
+t = title of the display window (symbol);
+v = visible/invisible (int: 1/0);
+j = automatic project creator on/off (int: 1/0);
+

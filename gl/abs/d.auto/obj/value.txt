@@ -1,0 +1,5 @@
+<desc>;
+shared numeric value.;
+
+<args>;
+1) symbol: all objects that share the name of the object will have their values updated\, when a float is sent to the inlet of any of them.;

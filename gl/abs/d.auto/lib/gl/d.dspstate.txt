@@ -1,0 +1,5 @@
+<desc>;
+get and set the dspstate of pd.;
+
+<args>;
+argument: none.;

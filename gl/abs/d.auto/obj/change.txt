@@ -1,0 +1,5 @@
+<desc>;
+remove repeated numbers from a stream.;
+
+<args>;
+1) float: a number to specify the initial value.;

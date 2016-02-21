@@ -1,0 +1,5 @@
+<desc>;
+output a bang message.;
+
+<args>;
+argument: none.;

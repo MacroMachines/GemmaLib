@@ -1,0 +1,27 @@
+//[d.auto] - an auto complete abstraction;
+
+//GUI property list;
+
+fontsize 10; // size of texts that will be displayed in a patch;
+
+sizeoffset 0; // size of texts shown on the auto completion list relative to the fontsize;
+
+maxobjrow 6; // maximum number of object rows that will be shown at once;
+
+maxdescrow 15; // maximum number of description rows that will be shown at once;
+
+yoffset 2; // a gap between each items in pixels;
+
+maxletters 40; // the width of the list box based on the number of letters to show;
+
+unselbgc 225 251 246; // background color of unselected box;
+
+selbgc 132 232 212; // background color of selected box;
+
+unseltc 0 0 0; // text color of unselected box;
+
+seltc 255 255 255; // text color of selected box;
+
+descbgc 245 247 250; // background color of description box;
+
+desctc 0 0 0; // text color of description box;

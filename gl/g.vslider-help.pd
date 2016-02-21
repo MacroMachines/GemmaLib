@@ -1,0 +1,131 @@
+#N canvas 243 28 572 753 10;
+#X obj 10 699 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty g.vslider 3 12 0 18 -138934
+-1 0;
+#X obj 10 376 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 451 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 490 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 88 384 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 460 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 323 721 published under the GNU Public License;
+#X text 323 701 copyright by Iceblink Digital \, Inc.;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#N canvas 335 178 836 576 helpmode 0;
+#X obj 18 96 loadbang;
+#X obj 18 127 metro 50;
+#X obj 18 159 s help.file.mode;
+#X obj 78 376 f;
+#X msg 78 281 1;
+#X obj 78 304 change;
+#X obj 78 326 t b b;
+#X obj 105 352 value help.file.nth;
+#X obj 18 512 s \$0-help.file.z;
+#X obj 78 406 + 100;
+#X obj 18 256 t b b;
+#X obj 18 471 f;
+#X msg 512 471 c \$1 \$2 \$3;
+#X obj 476 352 r \$0-help.file.bgc;
+#X obj 18 216 r \$0-help.file.get.z;
+#X obj 455 393 list;
+#X obj 455 434 route bang;
+#X obj 512 512 gl/p.rectangle x 512 y 512 w 1024 h 1024 z 1;
+#X text 14 13 *this subpatch is used to make objects in this help file
+'only visible' in the display window. and to 'refresh' the display
+window as soon as you close the help file.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 15 0;
+#X connect 3 0 9 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 6 1 7 0;
+#X connect 7 0 3 1;
+#X connect 9 0 11 1;
+#X connect 9 0 7 0;
+#X connect 10 0 11 0;
+#X connect 10 1 4 0;
+#X connect 11 0 8 0;
+#X connect 12 0 17 0;
+#X connect 13 0 15 1;
+#X connect 14 0 10 0;
+#X connect 15 0 16 0;
+#X connect 16 1 12 0;
+#X restore 492 36 pd helpmode;
+#X obj 10 59 gl/p.display d iphone o 1;
+#X text 170 60 display window;
+#X text 198 400 change the corresponding property value.;
+#X text 188 384 - the property name \, followed by its value permits
+you to;
+#X text 118 424 reset;
+#X text 188 424 - reset all properties back to the creation settings.
+;
+#X text 118 496 you can set the creation arguments by using pairs of
+messages that are 'property name' and 'property value'.;
+#X text 148 538 - list of properties and value types.;
+#X text 52 94 change width;
+#X text 52 125 change height;
+#X msg 210 94 p default;
+#X msg 210 124 reset;
+#X text 255 125 reset all to the creation settings;
+#X text 375 155 change r \, g \, b \, a values;
+#X msg 210 154 r 100 \, g 200 \, b 255 \, a 200;
+#X msg 210 184 c aquamarine;
+#X text 295 185 load color from 'gl/text/color.txt';
+#X text 118 384 message;
+#X floatatom 160 340 5 0 0 0 - - -, f 5;
+#X obj 10 214 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 10 236 v \$1;
+#X text 44 237 visible/invisible;
+#X text 7 255 (the touch actions will be ignored when it's invisible)
+;
+#X msg 210 236 o \$1;
+#X floatatom 210 214 5 0 20 0 - - -, f 5;
+#X text 118 461 float;
+#X text 198 340 outputs slider value from 0 to 1;
+#X msg 11 184 i 0.75;
+#X text 58 185 set value (initialize);
+#X obj 10 670 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X text 310 563 p = name of preset to load (symbol);
+#X text 310 583 c = name of color to load (symbol);
+#X text 16 563 x \, y = x and y coordinates in pixels (float);
+#X text 16 583 w \, h = width and height in pixels (float);
+#X text 310 603 r \, g \, b \, a = rgba values (int: 0-255);
+#X text 310 623 z = z-order(drawing order) (int: 1-100);
+#X text 16 623 v = visible/invisible (int: 1/0);
+#X msg 10 154 l 4;
+#X text 52 155 change line width;
+#X text 16 643 i = initialize(set) value (float: 0-1);
+#X text 21 37 draw a vertical slider to the display window;
+#X text 275 95 load a preset from 'gl/text/g.vslider.txt';
+#X obj 160 300 gl/g.vslider x 160 y 300 w 40 h 250 c orange o 6 i 0.5
+;
+#X msg 10 94 w 50;
+#X msg 10 124 h 280;
+#X text 188 461 - outputs slider value from 0 to 1;
+#X text 16 603 l = line width in pixels (float);
+#X text 244 237 change size offset of the thumb;
+#X text 310 643 o = size offset of thumb (float);
+#X text 17 702 tags: #gui \, #control \, #slider;
+#X connect 21 0 53 0;
+#X connect 22 0 53 0;
+#X connect 25 0 53 0;
+#X connect 26 0 53 0;
+#X connect 30 0 31 0;
+#X connect 31 0 53 0;
+#X connect 34 0 53 0;
+#X connect 35 0 34 0;
+#X connect 38 0 53 0;
+#X connect 48 0 53 0;
+#X connect 53 0 29 0;
+#X connect 54 0 53 0;
+#X connect 55 0 53 0;

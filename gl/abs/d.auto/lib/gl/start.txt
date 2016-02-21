@@ -1,0 +1,5 @@
+<desc>;
+create a set of startup objects at once.;
+
+<args>;
+argument: none.;

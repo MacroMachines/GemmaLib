@@ -1,0 +1,27 @@
+#N canvas 0 22 396 408 10;
+#X obj 13 4 inlet;
+#X obj 13 179 unpack f s f f f f s f;
+#X obj 158 242 * 8;
+#X obj 13 143 gl/ext/iemlib/soundfile_info;
+#X obj 13 38 route load;
+#X obj 13 264 outlet;
+#X obj 86 264 outlet;
+#X obj 158 264 outlet;
+#X obj 13 72 list;
+#X msg 13 107 read audio/\$1.wav;
+#X text 7 294 As [p.wavdata] belongs to one of the primitive abstractions
+\, when the patch runs in the Gemma app \, it will be replaced by a
+vanilla abstraction which just receives the file name (or path) of
+a wav file and send it to the app to find out the file information
+using C++ code. So any modification to this abstraction will not be
+applied when running in the Gemma app just like other primitives that
+uses 'p' as a namespace.;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 1 4 6 0;
+#X connect 1 5 2 0;
+#X connect 2 0 7 0;
+#X connect 3 0 1 0;
+#X connect 4 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;

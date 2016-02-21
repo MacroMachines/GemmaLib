@@ -1,0 +1,5 @@
+<desc>;
+general text handling.(vanilla only);
+
+<args>;
+arguments: define\, get\, set\, size\, tolist\, fromlist\, search\, sequence.;

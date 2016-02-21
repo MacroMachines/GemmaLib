@@ -1,0 +1,5 @@
+<desc>;
+read and write a list based preset from/to a text file.;
+
+<args>;
+1) symbol: file name(or path) to read from 'gl/text/' folder.;

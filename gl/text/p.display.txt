@@ -1,0 +1,5 @@
+default d iPad o 0 s 75 r 75 g 75 b 75 t Gemma a 4 l 0 j 1;
+iPad-L d iPad o 0;
+iPad-P d iPad o 1;
+iPhone-L d iPhone o 0;
+iPhone-P d iPhone o 1;

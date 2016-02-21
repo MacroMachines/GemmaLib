@@ -1,0 +1,5 @@
+<desc>;
+output bang after each DSP cycle.;
+
+<args>;
+argument: none.;

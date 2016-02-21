@@ -1,0 +1,5 @@
+<desc>;
+converts from linear (“RMS”) amplitude to decibels.(signal);
+
+<args>;
+argument: none.;

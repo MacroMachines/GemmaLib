@@ -1,0 +1,6 @@
+<desc>;
+create a scalar datum.(vanilla only);
+
+<args>;
+1) symbol: define.;
+2) symbol: name.;
