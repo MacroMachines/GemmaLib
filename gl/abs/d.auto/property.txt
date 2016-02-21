@@ -8,11 +8,11 @@ sizeoffset 0; // size of texts shown on the auto completion list relative to the
 
 maxobjrow 6; // maximum number of object rows that will be shown at once;
 
-maxdescrow 15; // maximum number of description rows that will be shown at once;
+maxdescrow 20; // maximum number of description rows that will be shown at once;
 
 yoffset 2; // a gap between each items in pixels;
 
-maxletters 40; // the width of the list box based on the number of letters to show;
+maxletters 45; // the width of the list box based on the number of letters to show;
 
 unselbgc 225 251 246; // background color of unselected box;
 

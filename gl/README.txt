@@ -2,30 +2,29 @@
 
 GemmaLib is a set of ‘Pure Data’ abstractions that allow one to easily create high quality musical apps that run on mobile devices through the application called Gemma. (currently only available on iOS)
 
-GemmaLib uses ‘GEM’(Graphics Environment for Multimedia) to easily design graphical interface of an app on the desktop platform by taking the advantage of it’s real-time programming environment and flexibility.
+GemmaLib uses ‘GEM’(Graphics Environment for Multimedia) to easily design a graphical interface of an app on the desktop platform by taking the advantage of its real-time programming environment and flexibility.
 
-Since ‘GEM’ itself is currently not possible to be used on mobile platforms, the abstractions that contain ‘GEM’ externals will be replaced by pure vanilla abstractions which simply forward the drawing info(e.g shape, size, color) to ‘openFrameworks’ when patch runs on the mobile device through Gemma app.
+Since it’s currently not possible to use‘GEM’ on mobile platforms, the abstractions that contain ‘GEM’ externals will be replaced by pure vanilla abstractions which simply forward the drawing info (e.g shape, size, color) to ‘openFrameworks’ when a patch runs on the mobile device through the Gemma app.
 
-You can find some examples of what you can build with GemmaLib from our website below.
-http://www.iceblinkdigital.com
+You can find some examples of what you can build with GemmaLib from our website www.iceblinkdigital.com.
 
-GemmaLib works on 3 platforms. (Mac OS X, Windows, Linux)
+GemmaLib works on 3 platforms (Mac OS X, Windows, Linux)
 
-GemmaLib uses some external libraries that are mostly used in abstractions that make development process easier. None of these externals will be supported when the patch runs in Gemma app. So, you are allowed to use only GemmaLib abstractions and vanilla objects in order to make the patch runs in Gemma app without any problem.
+GemmaLib uses some external libraries that are mostly used in abstractions that make the development process easier. None of these externals will be supported when the patch runs in the Gemma app. So you are allowed to use only GemmaLib abstractions and vanilla objects in order to make the patch runs in Gemma app without any problem.
 
-GemmaLib works in both vanilla and extended version of Pure Data except for only one abstraction called [t.myhero] since it uses object [text] which only works in vanilla currently. 
+GemmaLib works in both the vanilla and the extended version of Pure Data except for only one abstraction called [t.myhero]. The abstraction uses an object [text] that currently only works in vanilla currently. 
 
 GemmaLib contains all the necessary externals itself including ‘GEM’ so you don’t need to install any externals in order to use GemmaLib.
 
 When you install GemmaLib using the installer, the ‘gl’ folder will be copied to the user specific library path of Pure Data which differs depending on your Operating System.
 
-After the installation, you can call abstractions of GemmaLib in Pure Data patch by typing into the ‘object box’ as the example below.
+After the installation, you can call abstractions of GemmaLib in the Pure Data patch by typing into the ‘object box’ as the example below.
 
-example: [gl/p.display]
+Example: [gl/p.display]
 
-’gl’ is a library name(GemmaLib), ‘p’ is a namespace which is used to sort abstractions by common characteristics, and ‘display’ is a name of an abstraction which tells what it is or what it does.
+’gl’ is a library name (GemmaLib), ‘p’ is a namespace which is used to sort abstractions by common characteristics and ‘display’ is a name of an abstraction which tells what it is or what it does.
 
-You will be able to see more details of what each abstraction does by opening it’s help file.
+You will be able to see more details of what each abstraction does by opening its help file.
 
 You can see the full list of GemmaLib abstractions sorted by the namespaces below.
 
@@ -94,16 +93,16 @@ a.playwav2~ - play a wav file in stereo
 a.wavsampler1~ - advanced wav file player with mono output
 a.wavsampler2~ - advanced wav file player with stereo output
 
-7. Control message based(will be added)
+7. Control message based (will be added)
 
-8. Examples(will be added)
+8. Examples (will be added)
 
 
 *** Usage of folders ***
 
 GemmaLib contains some folders that are mainly used to put files to be used by GemmaLib abstractions.
 
-‘abs’ folder is mainly used to put pd abstractions that are not being used by themselves but only being called by other pd abstractions that are in the ’gl’ folder.
+‘abs’ folder is mainly used to put Pd abstractions that are not being used by themselves but only being called by other Pd abstractions that are in the ’gl’ folder.
 
 ‘audio’ folder is used to put audio files that can be used by audio related abstractions that are in the ‘gl’ folder. Only ‘wav’ files are allowed to be used in Gemma.
 
@@ -111,49 +110,49 @@ GemmaLib contains some folders that are mainly used to put files to be used by G
 
 ‘image’ folder is used to put image files that can be used by ‘p.image’ abstraction in the ‘gl’ folder. Only ‘png’ files are allowed to be used in Gemma.
 
-‘text’ folder is used to put text files that can be used by abstractions that uses the preset loading feature. (primitives and graphical control elements) And also by the text file handling abstractions.
+‘text’ folder is used to put text files that can be used by abstractions that use the preset loading feature (primitives and graphical control elements) as well as by the text file handling abstractions.
 
-Each of these folders can have a ’shared’ folder which allows you to make the files in the folder accessible by users of your Gem, provided that your Gem is submitted to us and available on the Gem Store.
+Each of these folders can have a folder named ’shared’ which allows you to make the files in the folder accessible by the users of your Gem, provided that your Gem is submitted to us and available on the Gem Store.
 
-It can be useful if you want to for example, let users of your Gem to add or replace the audio files that your Gem is using or let them to store their own preset settings of your Gem by downloading the preset text files.
+It can be useful if you want to, for example, let users of your Gem add or replace the audio files that your Gem is using or let them store their own preset settings of your Gem by downloading the preset text files.
 
 
 *** Accessing to the ’shared’ folder ***
 
-Connect your iOS device to your Desktop, open iTunes and go to the file sharing section and find Gemma app.
+Connect your iOS device to your Desktop, open iTunes and go to the file sharing section and find the Gemma app.
 
 - Downloading shared files
 
-If you want to download all shared contents of a Gem, create a folder named “-d Gemname” and drag & drop the folder into the file sharing section of Gemma app.
-In Gemma app, go back to the main view and tap ‘My Gems’ section to refresh Gems you currently have in your device. When refreshing is done, the folder will contain all shared files in it if it has any.
+If you want to download all shared contents of a Gem, create a folder named ‘-d Gemname’ and drag & drop the folder into the file sharing section of the Gemma app.
+In the Gemma app you have to go back to the main view and tap the ‘My Gems’ section to refresh the Gems you currently have in your device. After refreshing the folder will contain all shared files in it if it has any.
 
 - Uploading files to the shared folder
 
-If you want to upload any file into the shared folder of a Gem, the easiest way to do it is to first download all the shared files using the method above, then put the files you want to upload into the proper folder. (e.g. audio, text) Then, rename the folder to “-u Gemname” and then drag & drop the folder into the file sharing section of Gemma app.
-When refreshing is done, the folder will be deleted if uploading is properly done.
+If you want to upload any file into the shared folder of a Gem, the easiest way to do it is to first download all the shared files using the method above and then put the files you want to upload into the proper folder (e.g. audio, text). Then, rename the folder to ‘-u Gemname’ and then drag & drop the folder into the file sharing section of the Gemma app.
+After refreshing the folder will be deleted if the uploading is properly done.
 It will overwrite the files that have the same name when you upload them.
 
 - Replacing the shared folder
 
-It is basically the same as uploading files to the shared folder except that it will replace the whole shared folder contents with the one that you will upload. You can do this the same way as uploading above but by renaming the folder to “-r Gemname”.
+It is basically the same as uploading files to the shared folder except that it will replace the whole shared folder contents with the one that you will upload. You can do this the same way as uploading but by renaming the folder to ‘-r Gemname’.
 
-* if you want to download/upload files to/from only a specific shared folder, you can do the same way as above but adding ‘shared folder name’ when renaming the folder.
-For example, “-d -text Gemname” will only download shared files in the text folder of the Gem. It applies the same way for uploading and replacing.
+* if you want to download/upload files to/from only a specific shared folder, you can do it the same way as described above but by adding ‘shared folder name’ when renaming the folder.
+For example, ‘-d -text Gemname’ will only download shared files in the text folder of the Gem. It applies the same way for uploading and replacing.
 
 
 *** Testing your Gem on iOS devices ***
 
-In order to test your GemmaLib based pd patch on your iOS device, you should first have the ‘Gemma’ app installed on your device since your patch is only executable through the Gemma app on iOS.
+In order to test your GemmaLib based Pd patch on your iOS device, you should first have the ‘Gemma’ app installed on your device since your patch is only executable through the Gemma app on iOS.
 
-You can test your patch by transferring the ‘Gem project’ folder to Gemma app on your iOS device through the file sharing on your iTunes.
+You can test your patch by transferring the ‘Gem project’ folder to the Gemma app on your iOS device through the file sharing on your iTunes.
 
-The ‘Gem project’ is a folder that contains your main pd patch as well as ‘gl’ folder that has all the necessary local files such as images, fonts, audio and text files.
+The ‘Gem project’ is a folder that contains your main Pd patch as well as a ‘gl’ folder that has all the necessary local files such as images, fonts, audio and text files.
 
-Your main pd patch must have a ‘p.display’ abstraction. Otherwise the patch will not be able to be executed in the Gemma app.
+Your main Pd patch must have a ‘p.display’ abstraction. Otherwise the patch will not be able to be executed in the Gemma app.
 
-Your ’Gem project’ folder and the main pd patch in it should have the same name since the Gemma app will find and open the patch based on the name of the folder it is in.
+Your ’Gem project’ folder and the main Pd patch in it should have the same name since the Gemma app will find and open the patch based on the name of the folder it is in.
 
-For example, if the name of your ‘Gem project’ folder is ‘Monster Synth’, your main pd patch file should be named ‘Monster Synth.pd’ inside the folder.
+For example, if the name of your ‘Gem project’ folder is ‘Monster Synth’, your main Pd patch file should be named ‘Monster Synth.pd’ inside the folder.
 
 The ‘p.display’ abstraction has the feature of automatically creating a ‘Gem project’ folder whenever you save the patch to a new location. You can find more info from the ‘p.display’ help file.
 
