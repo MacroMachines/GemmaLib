@@ -1,6 +1,6 @@
 *** Introduction ***
 
-GemmaLib is a set of ‘Pure Data’ abstractions that allow one to easily create high quality musical apps that run on mobile devices through the application called Gemma. (currently only available on iOS)
+GemmaLib is a set of ‘Pure Data’ abstractions that allows one to easily create high quality musical apps that run on mobile devices through the application called Gemma. (Currently only available on iOS.)
 
 GemmaLib uses ‘GEM’(Graphics Environment for Multimedia) to easily design a graphical interface of an app on the desktop platform by taking the advantage of its real-time programming environment and flexibility.
 
