@@ -1,7 +1,14 @@
 // GemmaLib Update Log - please do not edit/delete this file.;
 
-//*****release date: 2015-02-22*****//;
+//*****release date: 2016-02-22*****//;
 version 1.0.1;
 space 87.7MB;
 <updates>;
+updatelog.txt; //version update;
+
+//*****release date: 2016-03-03*****//;
+version 1.0.2;
+space 87.7MB;
+<updates>;
+d.auto.pd; //bug fixed when copying text;
 updatelog.txt; //version update;
