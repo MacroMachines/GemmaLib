@@ -2413,7 +2413,7 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 ;
 #X text 61 54 Copyright (C) 2016 \, Iceblink Digital \, Inc.;
 #X restore 954 -65 pd LICENSE-GPL;
-#X obj 173 25 route obj mouse key motion font mouseup copy paste setbounds
+#X obj 173 25 route obj mouse key motion font mouseup copy setbounds
 ;
 #X connect 0 0 110 0;
 #X connect 1 0 66 0;
@@ -2545,5 +2545,5 @@ License along with this program. If not \, see <http://www.gnu.org/licenses/>.
 #X connect 110 3 55 1;
 #X connect 110 3 72 1;
 #X connect 110 4 68 0;
-#X connect 110 9 62 0;
-#X connect 110 9 87 0;
+#X connect 110 8 62 0;
+#X connect 110 8 87 0;
