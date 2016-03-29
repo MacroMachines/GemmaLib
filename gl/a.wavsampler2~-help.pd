@@ -37,25 +37,17 @@
 #X text 108 650 float;
 #X text 90 719 1) symbol;
 #X text 156 106 stop playback.;
-#X text 178 604 - the outgoing audio signal. (left channel);
 #X text 108 541 load;
 #X text 177 541 - the "load" message \, followed by the name(or relative
 path);
 #X text 334 237 mono wav file;
 #X text 189 558 of a wav file without ".wav" \, permits you to load
 the file.;
-#X text 177 460 - play the certain time range(from \, to) in a wav
-file. (ms);
-#X text 177 482 - play a wav file from certain time to end. (ms);
 #X text 178 394 - play a wav file from beginning to end.;
 #X text 178 719 - the name(or relative path) of the wav file to load.
 ;
 #X text 187 574 *file name(or path) should not contain any space.;
 #X text 190 737 *file name(or path) should not contain any space.;
-#X text 156 167 play the wav file from 5000ms to end.;
-#X text 156 64 play the wav file from beginning to end.;
-#X text 156 126 play the certain range(1000ms ~ 2700ms) in the wav
-file.;
 #X text 334 216 stereo wav file;
 #X text 210 287 *file name(or path) should not contain any space.;
 #X msg 82 148 2700 1000;
@@ -64,14 +56,11 @@ file.;
 #X msg 11 215 speed 2;
 #X obj 367 337 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 156 85 play the wav file backwards.;
 #X msg 11 261 speed 0.5;
 #X text 10 195 playback speed;
 #X text 75 215 2x faster;
 #X text 75 238 original;
 #X text 75 260 2x slower;
-#X text 156 147 play the certain range(1000ms ~ 2700ms) backwards.
-;
 #X text 384 335 -> end of playback. (bang);
 #X text 351 364 -> total length of the wav file. (ms);
 #X text 108 416 reverse;
@@ -90,7 +79,6 @@ the;
 #X obj 88 628 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
 ;
 #X text 108 627 signal;
-#X text 178 627 - the outgoing audio signal. (right channel);
 #X text 35 333 *both channels will be;
 #X text 41 350 used even if you load;
 #X text 41 366 a mono wav file.;
@@ -137,20 +125,33 @@ the;
 ;
 #X text 206 257 you should use relative path from 'audio' folder.;
 #X text 17 791 tags: #audio \, #sampler \, #wav;
+#X text 156 147 play a certain time range(1000ms ~ 2700ms) backwards.
+;
+#X text 156 126 play a certain time range(1000ms ~ 2700ms) in a wav
+file.;
+#X text 156 64 play a wav file from beginning to end.;
+#X text 156 85 play a wav file backwards.;
+#X text 156 167 play a wav file from 5000ms to end.;
+#X text 177 460 - play a certain time range(from \, to) in a wav file.
+(ms);
+#X text 178 604 - the outcoming audio signal. (left channel);
+#X text 178 627 - the outcoming audio signal. (right channel);
+#X text 177 482 - play a wav file from certain time to the end. (ms)
+;
 #X connect 13 0 11 0;
-#X connect 15 0 79 0;
-#X connect 16 0 79 0;
-#X connect 17 0 79 0;
-#X connect 18 0 79 0;
-#X connect 44 0 79 0;
-#X connect 45 0 79 0;
-#X connect 46 0 79 0;
-#X connect 47 0 79 0;
-#X connect 50 0 79 0;
-#X connect 66 0 11 1;
-#X connect 77 0 79 0;
-#X connect 78 0 79 0;
-#X connect 79 0 13 0;
-#X connect 79 1 66 0;
-#X connect 79 2 14 0;
-#X connect 79 3 48 0;
+#X connect 15 0 70 0;
+#X connect 16 0 70 0;
+#X connect 17 0 70 0;
+#X connect 18 0 70 0;
+#X connect 38 0 70 0;
+#X connect 39 0 70 0;
+#X connect 40 0 70 0;
+#X connect 41 0 70 0;
+#X connect 43 0 70 0;
+#X connect 58 0 11 1;
+#X connect 68 0 70 0;
+#X connect 69 0 70 0;
+#X connect 70 0 13 0;
+#X connect 70 1 58 0;
+#X connect 70 2 14 0;
+#X connect 70 3 42 0;

@@ -3,35 +3,19 @@
 #X text 73 7 auto complete abstraction;
 #X text 3 40 [d.auto] helps you to quickly find an object that you
 want to create.;
-#X text 3 86 [d.auto] works per each canvas. Meaning \, even if you
-have it on your main canvas \, it won't work in your subpatch or abstraction
-if the canvas doesn't have [d.auto] in it.;
-#X text 3 146 For this reason \, a new [d.auto] will be automatically
-created as long as you create a subpatch through the auto completion.
-;
-#X text 3 212 * How to use;
-#X text 337 236 to create an object.;
-#X text 290 256 (e.g Command + 1 in Mac OS X);
+#X text 357 236 to create an object.;
+#X text 286 256 (e.g Command + 1 in Mac OS X);
 #X text 333 290 create.;
 #X text 16 326 (Up: previous \, Down: next \, Left: first \, Right:
 last);
-#X text 3 256 2) Create an object box by using the short cut.;
 #X text 3 346 5) Press 'Space bar' if you want to type creation arguments.
 ;
-#X text 3 311 4) Use 4 arrow keys to select the object name you want
-to;
-#X text 350 311 create.;
 #X text 346 271 to type.);
 #X text 16 271 (this will freeze the object movement so you are ready
 ;
 #X text 3 367 6) Press 'Enter' to finish creating an object.;
 #X text 3 290 3) Type the beginning letter of the object you want to
 ;
-#X text 3 236 1) Locate a mouse cursor to the location where you want
-;
-#X text 363 402 object box.;
-#X text 3 402 * Auto completion only works whenever you firstly create
-an;
 #X text 3 422 * You can customize the GUI of [d.auto] by editing the
 ;
 #X text 15 442 Check out the property.txt file located in 'gl/abs/d.auto'
@@ -43,3 +27,19 @@ an;
 #X text 263 503 published under the GNU Public License;
 #X text 263 483 copyright by Iceblink Digital \, Inc.;
 #X text 7 483 tags: #development \, #autocomplete;
+#X text 3 86 [d.auto] works per each canvas. Even if you have it on
+your main canvas \, it won't work in your subpatch or abstraction if
+the canvas doesn't have [d.auto] in it.;
+#X text 3 146 For this reason \, a new [d.auto] will automatically
+be created as long as you create a subpatch through auto completion.
+;
+#X text 3 212 How to use;
+#X text 3 236 1) Locate your mouse cursor to the location where you
+want;
+#X text 3 256 2) Create an object box by using the shortcut.;
+#X text 357 311 to create.;
+#X text 3 311 4) Use the 4 arrow keys to select the object name you
+want;
+#X text 3 402 * Auto completion feature only works \, when you firstly
+;
+#X text 334 402 create an object box.;

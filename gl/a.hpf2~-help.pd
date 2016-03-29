@@ -36,7 +36,6 @@
 #X floatatom 303 180 5 0 0 0 - - -, f 5;
 #X obj 306 156 hsl 128 15 0 1 0 0 empty empty resonance -2 -8 0 10
 -262144 -1 -1 0 1;
-#X text 178 394 - the incoming signal to be filtered.;
 #X text 177 422 - cutoff frequency in Hz. (range: 20 ~ samplerate/2)
 ;
 #X text 177 449 - resonance. (range: 0 ~ 1);
@@ -81,14 +80,15 @@
 #X restore 502 57 pd d.dspstate;
 #X obj 188 291 a.hpf2~;
 #X text 17 577 tags: #audio \, #filter;
-#X connect 17 0 34 1;
-#X connect 18 0 34 2;
+#X text 178 394 - incoming signal to be filtered.;
+#X connect 17 0 33 1;
+#X connect 18 0 33 2;
 #X connect 19 0 17 0;
 #X connect 20 0 19 0;
 #X connect 21 0 20 0;
 #X connect 22 0 18 0;
 #X connect 23 0 22 0;
-#X connect 27 0 34 0;
-#X connect 29 0 28 0;
-#X connect 29 0 28 1;
-#X connect 34 0 29 0;
+#X connect 26 0 33 0;
+#X connect 28 0 27 0;
+#X connect 28 0 27 1;
+#X connect 33 0 28 0;

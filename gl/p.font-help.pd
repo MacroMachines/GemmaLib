@@ -99,9 +99,9 @@ messages that are 'the number of font slot' and 'font file;
 #X msg 74 124 p default;
 #X text 139 125 load a preset from 'gl/text/p.font.txt';
 #X text 198 400 change the corresponding property value.;
-#X text 188 384 - the property name \, followed by its value permits
-you to;
 #X text 17 645 tags: #gui \, #primitives \, #font;
+#X text 188 384 - the property name followed by its value \, permits
+you to;
 #X connect 16 0 17 0;
 #X connect 17 0 37 0;
 #X connect 25 0 15 0;

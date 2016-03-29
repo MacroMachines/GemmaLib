@@ -12,3 +12,10 @@ space 87.7MB;
 <updates>;
 d.auto.pd; //bug fixed when copying text;
 updatelog.txt; //version update;
+
+//*****release date: 2016-03-29*****//;
+version 1.0.3;
+space 87.7MB;
+<updates>;
+p.display.pd; //disabled auto project renaming;
+updatelog.txt; //version update;

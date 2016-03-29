@@ -34,7 +34,6 @@
 #X floatatom 303 133 5 0 0 0 - - -, f 5;
 #X obj 306 109 hsl 128 15 0 1 0 0 empty empty resonance -2 -8 0 10
 -262144 -1 -1 0 1;
-#X text 178 394 - the incoming signal to be filtered.;
 #X text 177 422 - cutoff frequency in Hz. (range: 20 ~ samplerate/2)
 ;
 #X text 177 449 - resonance. (range: 0 ~ 1);
@@ -95,20 +94,21 @@
 #X obj 188 294 a.multimode~;
 #X text 274 294 default is 2 pole low pass mode.;
 #X text 17 577 tags: #audio \, #filter;
-#X connect 17 0 44 0;
+#X text 178 394 - incoming signal to be filtered.;
+#X connect 17 0 43 0;
 #X connect 18 0 17 0;
 #X connect 19 0 18 0;
-#X connect 20 0 45 0;
+#X connect 20 0 44 0;
 #X connect 21 0 20 0;
-#X connect 25 0 47 0;
-#X connect 27 0 26 0;
-#X connect 27 0 26 1;
-#X connect 31 0 47 3;
-#X connect 32 0 47 3;
-#X connect 33 0 47 3;
-#X connect 34 0 47 3;
-#X connect 35 0 47 3;
-#X connect 36 0 47 3;
-#X connect 44 0 47 1;
-#X connect 45 0 47 2;
-#X connect 47 0 27 0;
+#X connect 24 0 46 0;
+#X connect 26 0 25 0;
+#X connect 26 0 25 1;
+#X connect 30 0 46 3;
+#X connect 31 0 46 3;
+#X connect 32 0 46 3;
+#X connect 33 0 46 3;
+#X connect 34 0 46 3;
+#X connect 35 0 46 3;
+#X connect 43 0 46 1;
+#X connect 44 0 46 2;
+#X connect 46 0 26 0;

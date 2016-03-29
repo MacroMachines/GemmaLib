@@ -62,8 +62,6 @@ window as soon as you close the help file.;
 #X obj 10 59 gl/p.display d iphone o 1;
 #X text 170 60 display window;
 #X text 198 400 change the corresponding property value.;
-#X text 188 384 - the property name \, followed by its value permits
-you to;
 #X text 118 424 reset;
 #X text 188 424 - reset all properties back to the creation settings.
 ;
@@ -231,12 +229,14 @@ update;
 1;
 #X text 46 313 visible/invisible;
 #X text 17 722 tags: #gui \, #primitives \, #scope;
-#X connect 39 0 36 0;
-#X connect 40 0 46 0;
-#X connect 41 0 40 0;
-#X connect 42 0 36 0;
-#X connect 46 0 36 0;
-#X connect 48 0 36 0;
-#X connect 49 0 36 0;
-#X connect 52 0 36 0;
-#X connect 53 0 52 0;
+#X text 188 384 - the property name followed by its value \, permits
+you to;
+#X connect 38 0 35 0;
+#X connect 39 0 45 0;
+#X connect 40 0 39 0;
+#X connect 41 0 35 0;
+#X connect 45 0 35 0;
+#X connect 47 0 35 0;
+#X connect 48 0 35 0;
+#X connect 51 0 35 0;
+#X connect 52 0 51 0;

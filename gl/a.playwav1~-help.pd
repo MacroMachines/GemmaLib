@@ -36,25 +36,19 @@
 #X text 108 593 float;
 #X text 90 664 1) symbol;
 #X text 156 102 stop playback.;
-#X text 178 569 - the outgoing audio signal. (left channel);
 #X text 108 506 load;
 #X text 177 506 - the "load" message \, followed by the name(or relative
 path);
 #X text 358 228 mono wav file;
 #X text 189 523 of a wav file without ".wav" \, permits you to load
 the file.;
-#X text 177 450 - play the certain time range(from \, to) in a wav
-file. (ms);
 #X text 177 478 - play a wav file from certain time to end. (ms);
 #X text 178 394 - play a wav file from beginning to end.;
 #X text 178 664 - the name(or relative path) of the wav file to load.
 ;
 #X text 187 539 *file name(or path) should not contain any space.;
 #X text 190 682 *file name(or path) should not contain any space.;
-#X text 156 149 play the wav file from 5000ms to end.;
 #X text 156 77 play the wav file from beginning to end.;
-#X text 156 126 play the certain range(1000ms ~ 2700ms) in the wav
-file.;
 #X text 358 207 stereo wav file;
 #X text 234 278 *file name(or path) should not contain any space.;
 #X text 59 359 load a stereo wav file.;
@@ -108,19 +102,26 @@ file.;
 #X msg 208 207 load example/drumloop;
 #X msg 226 229 load example/vocal;
 #X obj 208 296 a.playwav1~ example/vocal;
-#X text 230 248 you should use relative path from 'audio' folder.;
 #X text 205 186 load a new wav file from 'gl/audio/example' folder.
 ;
 #X text 21 37 play a wav file in mono;
 #X text 17 739 tags: #audio \, #sampler \, #wav;
+#X text 156 126 play a certain range(1000ms ~ 2700ms) in the wav file.
+;
+#X text 156 149 play the wav file from 5000ms to the end.;
+#X text 230 248 you should use the relative path from 'audio' folder.
+;
+#X text 177 450 - play a certain time range(from \, to) in a wav file.
+(ms);
+#X text 178 569 - the outcoming audio signal. (left channel);
 #X connect 13 0 11 0;
 #X connect 13 0 11 1;
-#X connect 14 0 58 0;
-#X connect 15 0 58 0;
-#X connect 16 0 58 0;
-#X connect 17 0 58 0;
-#X connect 56 0 58 0;
-#X connect 57 0 58 0;
-#X connect 58 0 13 0;
-#X connect 58 1 46 0;
-#X connect 58 2 47 0;
+#X connect 14 0 54 0;
+#X connect 15 0 54 0;
+#X connect 16 0 54 0;
+#X connect 17 0 54 0;
+#X connect 52 0 54 0;
+#X connect 53 0 54 0;
+#X connect 54 0 13 0;
+#X connect 54 1 42 0;
+#X connect 54 2 43 0;

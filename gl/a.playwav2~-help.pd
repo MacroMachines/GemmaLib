@@ -36,15 +36,12 @@
 #X text 108 617 float;
 #X text 90 688 1) symbol;
 #X text 136 102 stop playback.;
-#X text 178 569 - the outgoing audio signal. (left channel);
 #X text 108 506 load;
 #X text 177 506 - the "load" message \, followed by the name(or relative
 path);
 #X text 338 228 mono wav file;
 #X text 189 523 of a wav file without ".wav" \, permits you to load
 the file.;
-#X text 177 450 - play the certain time range(from \, to) in a wav
-file. (ms);
 #X text 177 478 - play a wav file from certain time to end. (ms);
 #X text 178 394 - play a wav file from beginning to end.;
 #X text 178 617 - time length of the loaded wav file. (ms);
@@ -52,17 +49,13 @@ file. (ms);
 ;
 #X text 187 539 *file name(or path) should not contain any space.;
 #X text 190 706 *file name(or path) should not contain any space.;
-#X text 136 149 play the wav file from 5000ms to end.;
 #X text 136 77 play the wav file from beginning to end.;
-#X text 136 126 play the certain range(1000ms ~ 2700ms) in the wav
-file.;
 #X text 338 207 stereo wav file;
 #X text 214 278 *file name(or path) should not contain any space.;
 #X obj 243 328 *~ 0.5;
 #X obj 88 594 cnv 17 3 17 empty empty 1 5 9 0 16 -228856 -162280 0
 ;
 #X text 108 593 signal;
-#X text 178 593 - the outgoing audio signal. (right channel);
 #X text 35 323 *both channels will be;
 #X text 41 340 used even if you load;
 #X text 41 356 a mono wav file.;
@@ -113,20 +106,28 @@ file.;
 #X msg 188 207 load example/drumloop;
 #X msg 206 229 load example/vocal;
 #X obj 188 296 a.playwav2~ example/drumloop;
-#X text 210 248 you should use relative path from 'audio' folder.;
 #X text 185 186 load a new wav file from 'gl/audio/example' folder.
 ;
 #X text 21 37 play a wav file in stereo;
 #X text 17 763 tags: #audio \, #sampler \, #wav;
+#X text 136 126 play a certain range(1000ms ~ 2700ms) in the wav file.
+;
+#X text 136 149 play the wav file from 5000ms to the end.;
+#X text 210 248 you should use the relative path from 'audio' folder.
+;
+#X text 177 450 - play a certain time range(from \, to) in a wav file.
+(ms);
+#X text 178 569 - the outcoming audio signal. (left channel);
+#X text 178 593 - the outcoming audio signal. (right channel);
 #X connect 13 0 11 0;
-#X connect 14 0 62 0;
-#X connect 15 0 62 0;
-#X connect 16 0 62 0;
-#X connect 17 0 62 0;
-#X connect 44 0 11 1;
-#X connect 60 0 62 0;
-#X connect 61 0 62 0;
-#X connect 62 0 13 0;
-#X connect 62 1 44 0;
-#X connect 62 2 51 0;
-#X connect 62 3 52 0;
+#X connect 14 0 57 0;
+#X connect 15 0 57 0;
+#X connect 16 0 57 0;
+#X connect 17 0 57 0;
+#X connect 40 0 11 1;
+#X connect 55 0 57 0;
+#X connect 56 0 57 0;
+#X connect 57 0 13 0;
+#X connect 57 1 40 0;
+#X connect 57 2 46 0;
+#X connect 57 3 47 0;
