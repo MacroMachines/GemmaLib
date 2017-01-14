@@ -19,3 +19,10 @@ space 87.7MB;
 <updates>;
 p.display.pd; //disabled auto project renaming;
 updatelog.txt; //version update;
+
+//*****release date: 2017-01-14*****//;
+version 1.0.4;
+space 87.7MB;
+<updates>;
+d.auto.pd; //changed canvas color setting;
+updatelog.txt; //version update;
