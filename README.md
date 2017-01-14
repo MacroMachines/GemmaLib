@@ -1,4 +1,4 @@
-#What is GemmaLib
+#GemmaLib
 GemmaLib is a set of ‘Pure Data’ abstractions that allows you to easily create high-quality musical apps that run on mobile devices through the application called Gemma. You can download Gemma from App Store https://itunes.apple.com/us/app/gemma/id937275262?mt=8
 
 #Prerequisites
