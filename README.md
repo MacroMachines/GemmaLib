@@ -12,6 +12,6 @@ Inside GemmaLib folder, run installer.pd file to install GemmaLib.
 Please read README.txt file to learn details on how to use GemmaLib.
 If you have any questions please send an email to zack@iceblinkdigital.com
 
-#What can you create with GemmaLib
+#Examples
 Here you can find some examples of what you can create using GemmaLib.
 https://github.com/iceblinkdigital/exampleGems
