@@ -1,10 +1,14 @@
 ** Prerequisites **
+
 You need to have Pure Data (32-bit) installed on your computer. (https://puredata.info/downloads)
 
+
 ** How to install **
+
 Download GemmaLib and unzip it into any directory you want.
 Inside GemmaLib folder, run installer.pd file to install GemmaLib.
 Please read the description below to learn details on how to use GemmaLib.
+
 
 *** Introduction ***
 
