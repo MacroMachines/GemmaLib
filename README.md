@@ -20,3 +20,10 @@ If you already have GemmaLib installed on your computer, you can download the ne
 #Latest Update (v1.0.5)
 Added [g.knobman] abstraction which allows one to easily use the knob made of sequence of image files produced by jKnobMan.
 See the [g.knobman-help.pd] file for details.
+
+#Video Links
+Introduction 
+https://www.youtube.com/watch?v=FvPFKOkDOfo
+
+Knobman Update 
+https://www.youtube.com/watch?v=m29txG4cl4Y
