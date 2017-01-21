@@ -29,7 +29,7 @@ updatelog.txt; //version update;
 
 //*****release date: 2017-01-21*****//;
 version 1.0.5;
-space 88.1MB;
+space 87.7MB;
 <updates>;
 g.knobman.pd; //added knobman abstraction;
 g.knobman-help.pd; //added knobman help file;
