@@ -1,0 +1,1 @@
+default s 64 n 31 t 200 c white a 255 l example/Shape_sample/Shape_sample v 1;

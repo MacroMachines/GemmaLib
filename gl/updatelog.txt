@@ -26,3 +26,15 @@ space 87.7MB;
 <updates>;
 d.auto.pd; //changed canvas color setting;
 updatelog.txt; //version update;
+
+//*****release date: 2017-01-21*****//;
+version 1.0.5;
+space 88.1MB;
+<updates>;
+g.knobman.pd; //added knobman abstraction;
+g.knobman-help.pd; //added knobman help file;
+abs/d.auto/lib/gl/g.knobman.txt; //added knobman for d.auto;
+image/example/2Color_Pointed; //added knobman example images;
+image/example/Shape_sample; //added knobman example images;
+text/g.knobman.txt; //added knobman preset file;
+updatelog.txt; //version update;

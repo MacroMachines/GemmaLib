@@ -1,0 +1,15 @@
+<desc>;
+draw a knob made of sequence of images.;
+
+<args>;
+x\, y = x and y coordinates in pixels (float);
+p = name of preset to load (symbol);
+s = size in pixels (float);
+c = name of color to load (symbol);
+n = number of knob images to use (int);
+r\, g\, b\, a = rgba values (int);
+v = visible/invisible (int);
+z = z-order(drawing order) (int);
+t = total number of pixels between min and max value (float);
+i = initialize(set) value (float);
+l = base image file name to load (symbol);

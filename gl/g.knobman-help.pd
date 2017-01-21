@@ -1,0 +1,159 @@
+#N canvas 247 27 572 777 10;
+#X obj 10 719 cnv 15 552 42 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#X obj 10 10 cnv 15 552 26 empty empty g.knobman 3 12 0 18 -138934
+-1 0;
+#X obj 10 376 cnv 3 550 3 empty empty inlets 8 12 0 13 -228856 -1 0
+;
+#X obj 10 451 cnv 3 550 3 empty empty outlets 8 12 0 13 -228856 -1
+0;
+#X obj 10 490 cnv 3 550 3 empty empty arguments 8 12 0 13 -228856 -1
+0;
+#X obj 88 384 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X obj 88 460 cnv 17 3 17 empty empty 0 5 9 0 16 -228856 -162280 0
+;
+#X text 323 741 published under the GNU Public License;
+#X text 323 721 copyright by Iceblink Digital \, Inc.;
+#X obj 10 37 cnv 15 552 16 empty empty empty 3 12 0 18 -85426 -1 0
+;
+#N canvas 335 178 836 576 helpmode 0;
+#X obj 18 96 loadbang;
+#X obj 18 127 metro 50;
+#X obj 18 159 s help.file.mode;
+#X obj 78 376 f;
+#X msg 78 281 1;
+#X obj 78 304 change;
+#X obj 78 326 t b b;
+#X obj 105 352 value help.file.nth;
+#X obj 18 512 s \$0-help.file.z;
+#X obj 78 406 + 100;
+#X obj 18 256 t b b;
+#X obj 18 471 f;
+#X msg 512 471 c \$1 \$2 \$3;
+#X obj 476 352 r \$0-help.file.bgc;
+#X obj 18 216 r \$0-help.file.get.z;
+#X obj 455 393 list;
+#X obj 455 434 route bang;
+#X obj 512 512 gl/p.rectangle x 512 y 512 w 1024 h 1024 z 1;
+#X text 14 13 *this subpatch is used to make objects in this help file
+'only visible' in the display window. and to 'refresh' the display
+window as soon as you close the help file.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 15 0;
+#X connect 3 0 9 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 6 1 7 0;
+#X connect 7 0 3 1;
+#X connect 9 0 11 1;
+#X connect 9 0 7 0;
+#X connect 10 0 11 0;
+#X connect 10 1 4 0;
+#X connect 11 0 8 0;
+#X connect 12 0 17 0;
+#X connect 13 0 15 1;
+#X connect 14 0 10 0;
+#X connect 15 0 16 0;
+#X connect 16 1 12 0;
+#X restore 492 36 pd helpmode;
+#X obj 10 59 gl/p.display d iphone o 1;
+#X text 170 60 display window;
+#X text 198 400 change the corresponding property value.;
+#X text 118 424 reset;
+#X text 188 424 - reset all properties back to the creation settings.
+;
+#X text 118 496 you can set the creation arguments by using pairs of
+messages that are 'property name' and 'property value'.;
+#X text 148 538 - list of properties and value types.;
+#X msg 210 94 p default;
+#X msg 210 124 reset;
+#X text 255 125 reset all to the creation settings;
+#X text 375 155 change r \, g \, b \, a values;
+#X text 118 384 message;
+#X floatatom 160 340 5 0 0 0 - - -, f 5;
+#X obj 10 234 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 10 256 v \$1;
+#X text 44 257 visible/invisible;
+#X text 7 275 (the touch actions will be ignored when it's invisible)
+;
+#X text 118 461 float;
+#X msg 10 154 i 0.75;
+#X text 57 155 set value (initialize);
+#X obj 10 690 cnv 3 550 3 empty empty more_info 8 12 0 13 -228856 -1
+0;
+#X text 310 563 p = name of preset to load (symbol);
+#X text 310 583 c = name of color to load (symbol);
+#X text 16 563 x \, y = x and y coordinates in pixels (float);
+#X text 310 603 r \, g \, b \, a = rgba values (int: 0-255);
+#X text 16 623 v = visible/invisible (int: 1/0);
+#X text 52 95 change size;
+#X msg 10 94 s 100;
+#X floatatom 10 184 5 100 500 0 - - -, f 5;
+#X msg 10 206 t \$1;
+#X text 198 340 outputs knob value from 0 to 1;
+#X text 188 461 outputs knob value from 0 to 1;
+#X text 265 185 load color from 'gl/text/color.txt';
+#X text 16 583 s = size in pixels (float);
+#X text 16 663 i = initialize(set) value (float: 0-1);
+#X text 17 722 tags: #gui \, #control \, #knob;
+#X text 188 384 - the property name followed by its value \, permits
+you to;
+#X text 21 37 draw a knob made of a sequence of images;
+#X text 266 37 produced by jknobman;
+#X obj 160 300 gl/g.knobman x 160 y 300 s 64 n 35 l example/2Color_Pointed/2Color_Pointed
+i 0.5;
+#X msg 10 124 n 31;
+#X text 52 125 number of knob images;
+#X text 44 207 change intensity of control;
+#X msg 210 154 r 255 \, g 200 \, b 255 \, a 255;
+#X msg 210 184 c white;
+#X msg 210 234 l example/Shape_sample/Shape_sample;
+#X text 208 254 base image file name(path from 'gl/image' folder);
+#X text 16 603 n = number of knob images to use (int);
+#X text 16 643 t = total number of pixels between min and max value
+(float);
+#X text 310 623 z = z-order(drawing order) (int: 1-100);
+#X text 310 663 l = base image file name to load (symbol);
+#X text 275 95 load a preset from 'gl/text/g.knobman.txt';
+#N canvas 461 160 414 495 how_to_get_jknobman_image_files 0;
+#X text 21 55 1) Download and install jKnobMan app from the link below.
+(http://www.g200kg.com/jp/software/knobman.html);
+#X text 22 95 2) Run jKnobMan and open any existing knob project file.
+;
+#X text 22 125 3) Go to 'File' and select 'Export Image' to export.
+;
+#X text 22 155 4) You will get a png file that has a number of knob
+image sprites in it.;
+#X text 22 265 7) Select 'Slice Tool (c)' from the Toolbox then select
+the whole image area by pressing 'Control + a' (Cmd on MacOSX);
+#X text 22 305 8) Right click on the image and select 'Divide Slice'.
+;
+#X text 22 335 9) Check 'Divide Horizontally Into' and type in the
+total number of knobs at 'slices down \, evenly spaced' section.;
+#X text 22 375 10) Go to 'File' and select 'Save for Web' and then
+choose 'PNG-24' and hit 'Save' to export sliced images at once.;
+#X text 22 415 11) Copy the sliced image files into your 'gl/image'
+directory inside your Gem project.;
+#X text 24 21 How to get sequence of image files from jKnobMan;
+#X text 22 195 5) You should slice this file to get individual knob
+images. (If you have Photoshop you can easily do this);
+#X text 22 236 6) Run Photoshop and open the exported image file.;
+#X restore 354 59 pd how_to_get_jknobman_image_files;
+#X text 284 60 open this->;
+#X connect 18 0 50 0;
+#X connect 19 0 50 0;
+#X connect 24 0 25 0;
+#X connect 25 0 50 0;
+#X connect 29 0 50 0;
+#X connect 38 0 50 0;
+#X connect 39 0 40 0;
+#X connect 40 0 50 0;
+#X connect 50 0 23 0;
+#X connect 51 0 50 0;
+#X connect 54 0 50 0;
+#X connect 55 0 50 0;
+#X connect 56 0 50 0;
